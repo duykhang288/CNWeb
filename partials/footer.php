@@ -62,7 +62,7 @@ if ( (is_administrator() && (basename($_SERVER['PHP_SELF']) != 'logout.php'))
                 
                 </div>
                 <div class="text-lg-center" style="background-color: rgba(230, 230, 230, 0.699);"> 
-                <p>&#169 2021 Bản quyền thuộc về PixelBooks.
+                <p>&#169 2021 Bản quyền thuộc về .
                     
                 </p> </div>
         </div>
