@@ -25,8 +25,7 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <script src="https://kit.fontawesome.com/3ed1709a9a.js" crossorigin="anonymous"></script>
-        <script src="js/jquery-3.6.0.min.js"></script>      
+        <script src="https://kit.fontawesome.com/3ed1709a9a.js" crossorigin="anonymous"></script>   
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
