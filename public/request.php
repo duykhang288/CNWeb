@@ -1,56 +1,45 @@
 <?php
-include '../partials/header.php';
+    include '../partials/header.php';
+    if (!isset($_POST['txtUsername'])){
+        die('');
+    }
+     
+    include '../partials/mysqli_connect.php';
+          
+          
+    $username   = addslashes($_POST['txtUsername']);
+    $password   = addslashes($_POST['txtPassword']);
+    $email      = addslashes($_POST['txtEmail']);
+    
+          
+   
+          
+        
+        $password = md5($password);
+        echo "<p>$password </p>";
+          
+    if (mysqli_num_rows(mysqli_query($dbc,"SELECT username FROM account WHERE username='$username'")) > 0){
+        echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
+          
 
-include '../partials/mysqli_connect.php';
+    if (mysqli_num_rows(mysqli_query($dbc,"SELECT Mail FROM account WHERE Mail='$email'")) > 0)
+    {
+        echo "Email này đã có người dùng. Vui lòng chọn Email khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
+    
+          
+    @$addmember = mysqli_query($dbc,
+    "INSERT INTO account (Username, Pass, Mail)
+VALUES ('$username', '$password', '$email')");
+    if ($addmember){
 
-// Dùng isset để kiểm tra Form
-if(isset($_POST['register'])){
-$username = trim($_POST['username']);
-$password = trim($_POST['password']);
-$email = trim($_POST['email']);
-$phone = trim($_POST['phone']);
-
-
-if (empty($username)) {
-array_push($errors, "Username is required"); 
-}
-if (empty($email)) {
-array_push($errors, "Email is required"); 
-}
-if (empty($phone)) {
-array_push($errors, "Password is required"); 
-}
-if (empty($password)) {
-array_push($errors, "Two password do not match"); 
-}
-
-// Kiểm tra username hoặc email có bị trùng hay không
-$sql = "SELECT * FROM member WHERE username = '$username' OR email = '$email'";
-
-// Thực thi câu truy vấn
-$result = mysqli_query($conn, $sql);
-
-// Nếu kết quả trả về lớn hơn 1 thì nghĩa là username hoặc email đã tồn tại trong CSDL
-if (mysqli_num_rows($result) > 0)
-{
-echo '<script language="javascript">alert("Bị trùng tên hoặc chưa nhập tên!"); window.location="register.php";</script>';
-
-// Dừng chương trình
-die ();
-}
-else {
-$sql = "INSERT INTO member (username, password, email, phone) VALUES ('$username','$password','$email','$phone')";
-echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="register.php";</script>';
-
-if (mysqli_query($conn, $sql)){
-echo "Tên đăng nhập: ".$_POST['username']."<br/>";
-echo "Mật khẩu: " .$_POST['password']."<br/>";
-echo "Email đăng nhập: ".$_POST['email']."<br/>";
-echo "Số điện thoại: ".$_POST['phone']."<br/>";
-}
-else {
-echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="register.php";</script>';
-}
-}
-}
+    
+    
+        echo "Quá trình đăng ký thành công. <a href='/'>Về trang chủ</a>";
+    }
+    else
+        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='register.php'>Thử lại</a>";
 ?>

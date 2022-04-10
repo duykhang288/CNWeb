@@ -1,0 +1,63 @@
+body {
+    height: 2500px;
+}
+.buttongreen {
+    background-color: #A5F6AB !important;
+    color: white !important;
+}
+.id {
+    height: 500px !important;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    background-color: #A5F6AB;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  #loginbox {
+      border-radius: 30px !important;
+     
+  }
+  #imglogin {
+      height: 500px;
+      width: 600px;
+    
+  }
+  #boxright {
+      padding: 30px;
+      background-color: rgba(237, 237, 237, 0.392);
+      margin: 0px !important;
+  }
+  #boxleft {
+      margin: 0px !important;
+  }
+  
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI';
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0;
+    background: #f4f4f4;
+    min-width: 1200px;
+    max-width: 1250px;
+}
+.dropdown-menu {
+ 
+  border-radius: 20px !important;
+}
