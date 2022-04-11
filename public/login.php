@@ -40,48 +40,42 @@ if (isset($_POST['dangnhap']))
     
 }
 ?>
-
-        <section class="intro mt-4">
+        <link rel="stylesheet" href="css/login.css">
+        <h1>Đăng nhập</h1>
+        <section class="intro ">
             <div class="bg-image h-100">
                 <div class="mask d-flex align-items-center h-100 " >
                 <div class="container">
                     <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-12 col-lg-9 col-xl-8">
-                        <div class="card shadow border-0" style="border-radius: 1rem;">
-                        <div class="row g-0">
+                        <div class="card border-0" style="border-radius: 1rem;">
+                        <div class="row">
                         
-                            <div class="col-md-8 d-flex align-items-center ">
+                            <div class="col-lg-8 offset-lg-2 d-flex align-items-center ">
                             <div class="card-body py-5 px-4 p-md-5">
 
                                 <form id="signupForm" form action="login.php?do=login" method="POST">
-                                <h4 class="fw-bold mb-4" style="color: #92aad0;">Đăng Nhập Vào Tài Khoản</h4>
+                                <h4 class="fw-bold mb-4" style="color: #494949;">Đăng Nhập Vào Tài Khoản</h4>
                                
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="txtUsername" name="txtUsername" class="form-control" />
-                                    <label class="form-label" for="txtUsername">Tên đăng nhập</label>
+                               
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="txtUsername" name="txtUsername" placeholder="Tên đăng nhập">
+                                    <label for="txtUsername">Tên đăng nhập</label>
                                 </div>
-
-                                <div class="form-outline mb-4">
-                                    <input type="password" id="tetPassword" name="txtPassword" class="form-control" />
-                                    <label class="form-label" for="tetPassword">Mật khẩu</label>
+                               
+                                <div class="form-floating mb-4">
+                                    <input type="password" id="tetPassword" name="txtPassword" class="form-control" placeholder="Mật khẩu" />
+                                    <label for="tetPassword">Mật khẩu</label>
                                 </div>
-
-                                <div class="d-flex justify-content-end pt-1 mb-4">
-                                    <button  type="submit" name="dangnhap" class="btn btn-primary">Đăng nhập</button>
+                                <div class="d-flex justify-content-center pt-1 mb-4">
+                                    <button  type="submit" name="dangnhap" class="btn" style="background-color: #494949 !important; color: #FFFFFF;"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
                                 </div>
                                 <hr>
-                                <a class="link float-end mx-2" href="#!">Quên mật khẩu? </a>
-                                <a class="link float-end" href="register.php">Đăng ký tài khoản</a>
+                                <a class="link float-end mx-2 btn" href="#!">Quên mật khẩu?  </a>
+                                <a class="link float-end btn"  href="register.php">Đăng ký tài khoản </a>
                                 </form>
 
                             </div>
-                            </div>
-                            <div class="col-md-4 d-none d-md-block">
-                            <img
-                                src="https://i.imgur.com/oChMDsH.jpg"
-                                alt="login form"
-                                class="img-fluid" style="border-top-right-radius: 1rem; border-bottom-right-radius: 1rem;"
-                            />
                             </div>
                         </div>
                         </div>
@@ -91,11 +85,14 @@ if (isset($_POST['dangnhap']))
                 </div>
             </div>
         </section>
+        <section class="mt-4">
+        
+        </section>
     <?php
         include '../partials/footer.php'; 
     ?>
     	<script type="text/javascript" src="jquery.validate.js"></script>
 
         <script type="text/javascript" src="js/check.js"> </script>
-    </body>
+    
 </html>

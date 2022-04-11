@@ -1,3 +1,4 @@
+
 <?php
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -5,11 +6,14 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 include __DIR__ . '/../functions.php'; ?><!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<link href="https://i.imgur.com/2gF16Sg.png" rel="icon" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="css/footer.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -25,9 +29,9 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 </head>
 <body>
 	<header>
-	<nav class="navbar navbar-expand-lg navbar-light  shadow-sm">
+	<nav class="navbar px-lg-5 navbar-expand-lg navbar-dark ">
   	<div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="https://i.imgur.com/2gF16Sg.png" alt="logo" style="height:57px; width: 73px;"></a>
+    <a class="navbar-brand" href="#"><img src="https://i.imgur.com/Mhe3S7M.png" alt="logo" style="height:30px; width: 30px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,10 +44,10 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
           <a class="nav-link active" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link  active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
@@ -53,13 +57,13 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
       
       </ul>
 	  <form class="d-flex mx-1">
-        <input class="form-control me-2" type="search" placeholder="Tìm Kiếm" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input class="form-control me-2 search" type="search" placeholder="Tìm Kiếm" aria-label="Search">
+        <a class="btn" type="submit"><i class="fa-solid fa-magnifying-glass iconheader"></i></a>
       </form>
 	  <div class="d-flex mx-1">
 	  
 	  	<a type="button" class="btn position-relative">
-		  	<i class="fa-solid fa-bell"></i>
+		  	<i class="fa-solid fa-bell iconheader"></i>
 			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 				99+
 				
@@ -71,7 +75,7 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 			
 			if (isset($_SESSION['username']) && $_SESSION['username']){
 				echo '<a type="button" class="btn  position-relative">
-				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				<i class="fa fa-shopping-cart iconheader" aria-hidden="true"></i>
 				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 					  99+
 					 
@@ -91,13 +95,13 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 		if (isset($_SESSION['username']) && $_SESSION['username']){
 
 			echo '	<div class="dropdown">
-			<a class="btn  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+			<a class="btn colorwhite"  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				
 				 ' ;
-			echo '<i class="fa-solid fa-user"></i> '.$_SESSION['username'];
+			echo '<i class="fa-solid fa-user iconheader"></i> '.$_SESSION['username'];
 				
 			echo '</a>
-			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+			<ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownMenuButton1">
 				<li><a class="dropdown-item" href="#">Thông tin <i class="fa-solid fa-circle-info"></i></a></li>
 				<li><a class="dropdown-item" href="#">Đơn hàng <i class="fa-solid fa-chart-simple"></i></a></li>
 				<li><a class="dropdown-item" href="logout.php">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
@@ -106,12 +110,30 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 			
 		}
 		else{
-			echo '<a href="login.php">Đăng nhập</a>';
+			echo '<a class="btn colorwhite" type="button" href="login.php">Đăng nhập</a>';
 		}
 		?>
-	  </div>
+	  		</div>
       
-    </div>
-  </div>
-</nav>
+    		</div>
+  			</div>
+		</nav>
+		<div class="container-fluid">
+		<div class="row text-center h-25 d-flex align-items-center justify-content-center" style="background-color:rgb(238, 238, 238)">
+                    <div class="col-lg-3">
+                        Tin Mới
+                    </div>
+                    <div class="col-lg-3">
+                        Sự Kiện
+                    </div>
+                    <div class="col-lg-3">
+                        Khuyến mãi
+                    </div>
+                    <div class="col-lg-3">
+                        Video 
+                    </div>
+                
+                </div>
+		</div> 
 	</header>
+	<main>
