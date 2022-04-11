@@ -1,6 +1,4 @@
-body {
-    height: 2500px;
-}
+
 .buttongreen {
     background-color: #A5F6AB !important;
     color: white !important;
@@ -15,17 +13,17 @@ body {
     right: 20px;
     z-index: 99;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
-    background-color: #A5F6AB;
+    background-color: #333333;
     color: white;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
   }
   
   #myBtn:hover {
-    background-color: #555;
+    color: #d1d1d1;
   }
   #loginbox {
       border-radius: 30px !important;
@@ -53,11 +51,50 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
     padding: 0;
-    background: #f4f4f4;
-    min-width: 1200px;
-    max-width: 1250px;
+    background: #ffffff !important;
+
 }
+  main {
+    max-width: 1250px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 .dropdown-menu {
- 
+  border-radius: 15px !important;
+  
+  color: white !important;
+  border:  0px!important;
+  padding: 10px !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  
+  background-color: #dcdcdc !important;
+  border-radius: 10px;
+}
+.navbar {
+  background-color: #333333 !important;
+  color: #F5F5F7 !important;
+  
+}
+.iconheader {
+  color: rgb(214, 214, 214);
+}
+.colorwhite {
+   color: rgb(214, 214, 214) !important;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color: rgb(214, 214, 214) !important;
+}
+.search {
+  background-color:rgb(214, 214, 214) !important  ;
   border-radius: 20px !important;
+}
+.btn-check:focus+.btn, .btn:focus {
+  outline: none !important; 
+  box-shadow: none !important; 
+}
+.h1, h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  margin: 30px !important;
+  color: #1D1D1F !important;
 }

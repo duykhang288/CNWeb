@@ -3,13 +3,13 @@
 		$(document).ready(function () {
 			$("#signupForm").validate({
 				rules: {
-					txtUsername: "required",
+					txtUsername: {required: true},
 			
 	
 					txtPassword: {required: true, minlength:5},
 				},
 				messages: {
-					txtUsername : "Bạn chưa nhập vào tên đăng nhập",
+					txtUsername : { required: "Bạn chưa nhập vào tên đăng nhập" },
 					txtPassword: {
 						required: "Bạn chưa nhập vào mật khẩu",
 						minlength: "Mat khau phai co it nhat 5 ky tu"
