@@ -4,7 +4,8 @@ if (session_status() === PHP_SESSION_NONE) {
 	session_start();
 }
 
-include __DIR__ . '/../functions.php'; ?><!doctype html>
+include __DIR__ . '/../functions.php'; ?>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">

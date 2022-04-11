@@ -14,24 +14,7 @@ if (isset($_GET['random'])) {
 
 if ($result = mysqli_query($dbc, $query)) {
 
-	if ($row = mysqli_fetch_array($result)) {
-		
-		$htmlspecialchars = 'htmlspecialchars';
-		echo "<div><blockquote>{$htmlspecialchars($row['quote'])}</blockquote>- 
-					{$htmlspecialchars($row['source'])}<br>";
 	
-		if ($row['favorite'] == 1) {
-			echo ' <strong>Yêu thích!</strong>';
-		}
-	
-		echo '</div>';
-	
-		if (is_administrator()) {
-			echo "<p><b>Quản trị Trích dẫn:</b> <a href=\"edit_quote.php?id={$row['id']}\">Sửa</a> <->
-			<a href=\"delete_quote.php?id={$row['id']}\">Xóa</a>
-			</p><br>";
-		}
-	}
 
 } else {
 	echo '<p class="error">Không thể lấy dữ liệu vì:<br>' . mysqli_error($dbc) .
@@ -40,9 +23,6 @@ if ($result = mysqli_query($dbc, $query)) {
 
 mysqli_close($dbc);
 
-echo '<p><a href="index.php">Mới nhất</a> <-> ' .
-		'<a href="index.php?random=true">Ngẫu nhiên</a> <-> ' .
-		'<a href="index.php?favorite=true">Yêu thích</a></p>';
-
+include '../partials/product.php';
 include '../partials/footer.php';
 ?>

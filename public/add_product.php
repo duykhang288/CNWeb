@@ -1,9 +1,8 @@
 <?php
 
-define('TITLE', 'Thêm một Trích dẫn');
+define('TITLE', 'Thêm Sản Phẩm');
 include '../partials/header.php';
 
-echo '<h2>Thêm một Trích dẫn</h2>';
 
 include '../partials/check_admin.php';
 

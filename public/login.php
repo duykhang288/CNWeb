@@ -3,8 +3,6 @@ define('TITLE', 'Đăng Nhập');
 include '../partials/header.php';
 
 
-
- 
 if (isset($_POST['dangnhap'])) 
 {
 

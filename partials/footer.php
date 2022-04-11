@@ -5,9 +5,9 @@ if (isset($_SESSION['username']) && $_SESSION['username']){
 	echo 'Bạn đã đăng nhập với tên là '.$_SESSION['username']."<br/>";
 	echo 'Click vào đây để <a href="logout.php">Logout</a>';
 }
-else{
-	echo 'Bạn chưa đăng nhập <a href="login.php">Đăng nhập</a>';
-}
+// else{
+// 	echo 'Bạn chưa đăng nhập <a href="login.php">Đăng nhập</a>';
+// }
 ?>
 	</div><!-- container -->
 	<div id="footer">Content &copy; 2022</div>
