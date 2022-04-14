@@ -119,22 +119,5 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
     		</div>
   			</div>
 		</nav>
-		<div class="container-fluid">
-		<div class="row text-center h-25 d-flex align-items-center justify-content-center" style="background-color:rgb(238, 238, 238)">
-                    <div class="col-lg-3">
-                        Tin Mới
-                    </div>
-                    <div class="col-lg-3">
-                        Sự Kiện
-                    </div>
-                    <div class="col-lg-3">
-                        Khuyến mãi
-                    </div>
-                    <div class="col-lg-3">
-                        Video 
-                    </div>
-                
-                </div>
-		</div> 
 	</header>
 	<main>
