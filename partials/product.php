@@ -1,5 +1,5 @@
 <div >
-    <section class="typePhone">
+    <section class="company">
         <div>
             <h3>Iphone</h3>
         </div>
@@ -37,13 +37,13 @@
             ?>
         </div>
     </section>
-    <section class="typePhone">
+    <section class="company">
         <h3>SamSung</h3>
     </section>
-    <section class="typePhone">
+    <section class="company">
         <h3>Huawei</h3>
     </section>
-    <section class="typePhone">
+    <section class="company">
         <h3>Oppo</h3>
     </section>
 </div>
