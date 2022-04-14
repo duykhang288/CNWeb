@@ -1,11 +1,11 @@
 <div >
     <section class="company">
         <div>
-            <h3>Iphone</h3>
+            <h3>Apple</h3>
         </div>
         <div class="products row">
             <?php 
-                    $query = 'SELECT proName, frontImage, endImage, color, quantity, price FROM products ';
+                    $query = 'SELECT * FROM products ';
                     // ORDER BY date_entered DESC
                     if ($result = mysqli_query($dbc, $query)){
                         
@@ -18,13 +18,14 @@
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <p class="card-text">'.$row['price'].' vnđ</p>
+                                        <p>'.$row['company'].'</p>
+                                        <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button href="#" class="btn btn-custom">Yêu thích</button>
+                                                <button class="btn-custom btn">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-                                                <button href="#" class="btn btn-custom">Đặt Hàng</button>
+                                                <button class="btn-custom btn">Đặt Hàng</button>
                                             </div>
                                             
                                         </div>

@@ -12,7 +12,10 @@
   display: block;
   float: left;
 }
-.btn-custom {
+.price {
+  font-weight: bold;
+}
+.products-item .btn-custom {
   display: inline-block;
   padding: 10px;
   border-radius: 20px;
@@ -25,4 +28,8 @@
   border: none;
   font-size: 16px;
   text-decoration: none;
+}
+.btn-custom:hover {
+  color: #1298c8;
+  background-color: #fff;
 }
