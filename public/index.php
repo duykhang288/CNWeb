@@ -5,7 +5,7 @@ include '../partials/header.php';
 include '../partials/mysqli_connect.php';
 
 ?>
-	<link rel="stylesheet" href="css/index.css">
+	
 	
 	<div class="row container-fluid my-3">
 		<div class="col-lg-9 order-lg-1 order-2 ">

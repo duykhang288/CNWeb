@@ -7,5 +7,16 @@
   }
 .typePhone h3 { 
   color: #333300;
-
+  font-weight: bold;
+}
+.typePhone .card {
+  height: 400px !important;
+  width: 250px;
+}
+.products {
+  list-style-type:none;
+}
+.products li {
+  display: block;
+  float: left;
 }

@@ -26,6 +26,7 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 		echo 'Trang Chủ';
 	}
 	?></title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<header>
