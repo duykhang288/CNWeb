@@ -12,3 +12,17 @@
   display: block;
   float: left;
 }
+.btn-custom {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+  width: 60%;
+  text-align: center;
+  color: #fff;
+  background-color: #1298c8;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+}

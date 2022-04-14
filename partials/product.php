@@ -19,11 +19,17 @@
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
                                         <p class="card-text">'.$row['price'].' vnđ</p>
-                                        
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button href="#" class="btn btn-custom">Yêu thích</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button href="#" class="btn btn-custom">Đặt Hàng</button>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
-                                    <div class="card-footer row">
-                                        <a href="#" class="btn btn-primary">Đặt Hàng</a>
-                                    </div>
+                                    
                                 </div>
                             </div>';
                         
