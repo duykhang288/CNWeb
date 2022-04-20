@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p><label>Mô tả <textarea name="proName" rows="5" cols="30"></textarea></label></p>
 	<p><label>Màu <input type="text" name="source"></label></p>
 	<p><label>Số lượng <input type="text" name="source"></label></p>
-	<p><label>Giá trị <input type="text" name="source"></label></p>
+	<p><label>Giá <input type="text" name="source"></label></p>
 	<p><input class="btn btn-custom" type="submit" name="submit" value="Thêm Sản phẩm này!"></p>
 </form>
 
