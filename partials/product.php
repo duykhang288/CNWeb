@@ -18,7 +18,6 @@
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <p>'.$row['company'].'</p>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
@@ -62,7 +61,6 @@
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <p>'.$row['company'].'</p>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
@@ -105,7 +103,6 @@
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <p>'.$row['company'].'</p>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
@@ -148,7 +145,6 @@
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <p>'.$row['company'].'</p>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
