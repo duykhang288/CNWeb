@@ -98,3 +98,7 @@
   margin: 30px !important;
   color: #1D1D1F !important;
 }
+.card {
+  border-radius: 20px !important;
+  background-color: rgb(240, 240, 240) !important;
+}
