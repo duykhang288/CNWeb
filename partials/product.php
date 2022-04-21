@@ -3,7 +3,7 @@
         <div>
             <h3>Apple</h3>
         </div>
-        <div class="products row">
+        <div class="products row container-fluid">
             <?php 
                     $query = 'SELECT * FROM products where company="Apple"';
                     // ORDER BY date_entered DESC
@@ -13,8 +13,8 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             // onclick="window.location.href="product_detail.php?id='.$row['proID'].'""
-                            echo '<div class="product-item col-sm-3">
-                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;" >
+                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
                                     
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     
@@ -26,7 +26,7 @@
                                                 <button class="btn-custom btn">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</butt>
+                                                <button class="btn-custom btn" data-toggle="modal" data-target="#CartModal">Đặt Hàng</butt>
                                             </div>
                                             
                                         </div>
