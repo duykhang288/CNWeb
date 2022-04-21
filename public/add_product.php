@@ -3,12 +3,13 @@
 define('TITLE', 'Thêm Sản Phẩm');
 include '../partials/header.php';
 
+echo '<h2>Thêm một Sản phẩm</h2>';
 
 //include '../partials/check_admin.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	if(!empty($_POST['proName']) && !empty($_POST['proID'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
+	if(!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
 
 		include "../partials/mysqli_connect.php";
 
@@ -33,14 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form action="add_product.php" method="post">
 	<p><label>ID sản phẩm <input type="text" name="proID"></label></p>
-	<p><label>Tên sản phẩm <input type="varchar" name="proName"></label></p>
+	<p><label>Tên sản phẩm <input type="text" name="proName"></label></p>
 	<p><label>Tên hãng <input type="text" name="company"></label></p>
 	<p><label>Hình ảnh <input type="text" name="frontImage"></label></p>
 	<p><label>Hình ảnh khác <input type="text" name="endImage"></label></p>
 	<p><label>Mô tả <textarea name="proDes" rows="5" cols="30"></textarea></label></p>
 	<p><label>Màu <input type="text" name="color"></label></p>
-	<p><label>Số lượng <input type="text" name="quantity"></label></p>
-	<p><label>Giá <input type="text" name="price"></label></p>
+	<p><label>Số lượng <input type="number" name="quantity"></label></p>
+	<p><label>Giá <input  name="price"></label></p>
 	<p><input class="btn btn-custom" type="submit" name="submit" value="Thêm Sản phẩm này!"></p>
 </form>
 
