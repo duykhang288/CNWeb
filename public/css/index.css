@@ -15,14 +15,14 @@
 .price {
   font-weight: bold;
 }
-.products-item .btn-custom {
-  display: inline-block;
+.card .btn-custom {
+
   padding: 10px;
   border-radius: 20px;
   width: 60%;
   text-align: center;
   color: #fff;
-  background-color: #1298c8;
+  background-color: #1298c8 !important;
   cursor: pointer;
   outline: none;
   border: none;
@@ -30,6 +30,6 @@
   text-decoration: none;
 }
 .btn-custom:hover {
-  color: #1298c8;
-  background-color: #fff;
+  color: #fff;
+  background-color: #1298c8;
 }

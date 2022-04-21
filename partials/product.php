@@ -12,9 +12,9 @@
                         while ($row = mysqli_fetch_array($result)) {
                     
                             // $htmlspecialchars = 'htmlspecialchars';
-                            
+                            // onclick="window.location.href="product_detail.php?id='.$row['proID'].'""
                             echo '<div class="product-item col-sm-3">
-                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;" onclick="window.location.href="product_detail.php?id='.$row['proID'].'"">
+                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;" >
                                     
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     
@@ -26,7 +26,7 @@
                                                 <button class="btn-custom btn">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom btn" data-toggle="modal" data-target="#CartModal">Đặt Hàng</button>
+                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</butt>
                                             </div>
                                             
                                         </div>
