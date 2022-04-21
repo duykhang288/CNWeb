@@ -16,7 +16,7 @@
                             echo '<div class="product-item col-sm-3">
                                 <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;" onclick="window.location.href="product_detail.php?id='.$row['proID'].'"">
                                     
-                                        <img class="card-img-top" src="'.$row['frontImage'].'">
+                                    <img class="card-img-top" src="'.$row['frontImage'].'">
                                     
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
