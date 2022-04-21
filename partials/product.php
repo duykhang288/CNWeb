@@ -26,11 +26,7 @@
                                                 <button class="">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-<<<<<<< HEAD
-                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal" value="Đặt hàng">Đặt Hàng</button>
-=======
-                                                <button class="btn-custom btn" data-toggle="modal" data-target="#CartModal">Đặt Hàng</butt>
->>>>>>> eee3ac3a412e1ea6bc1cf29bda07ee7d65a85b11
+                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</a>
                                             </div>
                                             
                                         </div>
@@ -172,7 +168,7 @@
                                 '.</p><p>Câu truy vấn là: ' . $query . '</p>';
                     }
                     
-                    //mysqli_close($dbc);
+                    mysqli_close($dbc);
             ?>
         </div>
     </section>
