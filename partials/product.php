@@ -26,7 +26,7 @@
                                                 <button class="btn-custom btn">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Đặt Hàng</button>
+                                                <button class="btn-custom btn" data-toggle="modal" data-target="#CartModal">Đặt Hàng</button>
                                             </div>
                                             
                                         </div>
