@@ -8,7 +8,7 @@ include '../partials/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	if(!empty($_POST['proName']) && !empty($_POST['company'])) {
+	if(!empty($_POST['proName']) && !empty($_POST['proID'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['description'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
 
 		include "../partials/mysqli_connect.php";
 

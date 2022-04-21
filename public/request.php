@@ -32,8 +32,8 @@
     
           
     @$addmember = mysqli_query($dbc,
-    "INSERT INTO account (Username, Pass, Mail)
-VALUES ('$username', '$password', '$email')");
+    "INSERT INTO account (Username, Pass, Mail, Adminn)
+VALUES ('$username', '$password', '$email' , '1')");
     if ($addmember){
 
     
