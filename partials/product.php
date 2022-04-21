@@ -23,10 +23,10 @@
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Yêu thích</button>
+                                                <button class="">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</butt>
+                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal" value="Đặt hàng">Đặt Hàng</button>
                                             </div>
                                             
                                         </div>

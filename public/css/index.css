@@ -8,20 +8,17 @@
 .products {
   list-style-type:none;
 }
-.products-item {
-  display: block;
-  float: left;
-}
 .price {
   font-weight: bold;
+  color: red!important;
 }
-.card .btn-custom {
-
+.btn-custom {
+  display: inline-block;
   padding: 10px;
   border-radius: 20px;
   width: 60%;
   text-align: center;
-  color: #fff;
+  color: #fff !important;
   background-color: #1298c8 !important;
   cursor: pointer;
   outline: none;
@@ -31,5 +28,5 @@
 }
 .btn-custom:hover {
   color: #fff;
-  background-color: #1298c8;
+  background-color: #45bde9;
 }

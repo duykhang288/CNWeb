@@ -5,7 +5,7 @@ echo '<div class="modal fade bd-example-modal-xl" id="CartModal" tabindex="-1" r
     <div class="modal-content">
         <div class="modal-header border-bottom-0">
             <h1>Giỏ hàng của bạn</h1>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
