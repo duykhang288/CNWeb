@@ -44,7 +44,16 @@
                                     <div class="col-lg-6 container-fluid">
                                         <h2>'.$row['proName'].'</h2>
 
-                                        <p>'.$row['description'].'</p>
+                                        <p>'.$row['proDes'].'</p>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button class="btn-custom">Yêu thích</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</a>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
                                 </div';
                          
