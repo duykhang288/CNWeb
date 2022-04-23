@@ -23,7 +23,7 @@
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="">Yêu thích</button>
+                                                <button class="btn-custom">Yêu thích</button>
                                             </div>
                                             <div class="col-6">
                                                 <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</a>

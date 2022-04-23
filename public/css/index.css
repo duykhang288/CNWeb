@@ -16,14 +16,14 @@
   display: inline-block;
   padding: 10px;
   border-radius: 20px;
-  width: 60%;
+  width: 100px!important;
   text-align: center;
   color: #fff !important;
   background-color: #1298c8 !important;
   cursor: pointer;
   outline: none;
   border: none;
-  font-size: 16px;
+  font-size: 12px;
   text-decoration: none;
 }
 .btn-custom:hover {
