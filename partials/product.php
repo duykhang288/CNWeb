@@ -2,6 +2,7 @@
     <section class="company">
         <div>
             <h3>Apple</h3>
+            
         </div>
         <div class="products row container-fluid">
             <?php 
@@ -23,10 +24,10 @@
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-custom">Yêu thích</button>
+                                                <button class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal">Đặt Hàng</a>
+                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>
                                             
                                         </div>

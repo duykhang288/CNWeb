@@ -14,7 +14,7 @@
 }
 .btn-custom {
   display: inline-block;
-  padding: 10px;
+  padding: 7px;
   border-radius: 20px;
   width: 100%;
   text-align: center;
@@ -23,10 +23,23 @@
   cursor: pointer;
   outline: none;
   border: none;
-  font-size: 12px;
+  font-size: 16px;
   text-decoration: none;
 }
-.btn-custom:hover {
+.btn-favorite {
+  display: inline-block;
+  padding: 7px;
+  border: 1px solid #1298c8;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  color: #1298c8 ;
+  background-color: #fff ;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+.btn-custom:hover, .btn-favorite:hover {
   color: #fff;
   background-color: #45bde9;
 }
