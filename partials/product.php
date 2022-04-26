@@ -27,7 +27,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?item='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -35,7 +35,7 @@
                                     
                                 </div>
                             </div>';
-                        
+                            // href="cart.php?item='.$row['proID'].'" 
                         }
                     } else {
                         echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 

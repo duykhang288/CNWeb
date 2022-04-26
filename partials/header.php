@@ -123,5 +123,8 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
     		</div>
   			</div>
 		</nav>
+		<?php
+			include '../partials/modal_cart.php';
+		?>
 	</header>
 	<main>
