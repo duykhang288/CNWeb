@@ -11,7 +11,7 @@
                     
                             echo '<div class=" col-md-4 col-lg-3 col-sm-6 col-3">
                                 <div class="card m-3 m-2 p-3 mb-5 border-1" style="width: 20rem;" >
-                                    <a href="product_detail.php?id='.$row['nID'].'">
+                                    <a href="news_detail.php?id='.$row['nID'].'">
                                     <img class="card-img-top" src="'.$row['image'].'">
                                     </a>
                                     <h4>'.$row['title'].'</h4>
