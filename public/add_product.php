@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p><label>Màu <input type="text" name="color"></label></p>
 	<p><label>Số lượng <input type="number" name="quantity"></label></p>
 	<p><label>Giá <input type="number" name="price"></label></p>
-	<p><input class="btn btn-custom" type="submit" name="submit" value="Thêm Sản phẩm này!"></p>
+	<p><input class="btn-custom" type="submit" name="submit" value="Thêm Sản phẩm này!"></p>
 </form>
 
 <?php include '../partials/footer.php'; ?>

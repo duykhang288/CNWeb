@@ -56,7 +56,9 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
             <li><a class="dropdown-item" href="#">Oppo</a></li>
           </ul>
         </li>
-      
+		<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="news.php">Tin Tức</a>
+        </li>
       </ul>
 	  <form class="d-flex mx-1">
         <input class="form-control me-2 search" type="search" placeholder="Tìm Kiếm" aria-label="Search">
