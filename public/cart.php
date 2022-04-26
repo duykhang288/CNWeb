@@ -5,7 +5,7 @@ include '../partials/header.php';
 include '../partials/mysqli_connect.php';
 
 echo '<div   class="container skin-light">
-<h1>GIỎ HÀNG</h1>
+<h1 style="text-align: center;">GIỎ HÀNG</h1>
 <table class="table">
   <thead scope="col">
       <tr>

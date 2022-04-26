@@ -44,8 +44,7 @@
                     //mysqli_close($dbc);
             ?>
         </div>
-    </section>
-    
+    </section> 
     <section class="company">
         <h3>Samsung</h3>
         <div class="products row">
