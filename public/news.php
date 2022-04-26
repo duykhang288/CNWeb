@@ -9,7 +9,7 @@
                         
                         while ($row = mysqli_fetch_array($result)) {
                     
-                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                            echo '<div class=" ol-md-4 col-lg-3 col-sm-6 col-3">
                                 <div class="card m-3 m-2 p-3 mb-5 border-1" style="width: 20rem;" >
                                     <a href="product_detail.php?id='.$row['nID'].'">
                                     <img class="card-img-top" src="'.$row['image'].'">
