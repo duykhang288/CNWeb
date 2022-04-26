@@ -27,7 +27,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -48,7 +48,7 @@
     </section>
     
     <section class="company">
-        <h3>SamSung</h3>
+        <h3>Samsung</h3>
         <div class="products row">
             <?php 
                     $query = 'SELECT * FROM products where company="SAMSUNG"';
@@ -58,7 +58,6 @@
                         while ($row = mysqli_fetch_array($result)) {
                     
                             // $htmlspecialchars = 'htmlspecialchars';
-                            
                             echo '<div class="product-item col-sm-3">
                                 <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
