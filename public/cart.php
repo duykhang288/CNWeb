@@ -5,7 +5,7 @@ include '../partials/header.php';
 include '../partials/mysqli_connect.php';
 
 echo '<div   class="container skin-light">
-<h1>GIỎ HÀNG</h1>
+<h1 style="text-align: center;">GIỎ HÀNG</h1>
 <table class="table">
   <thead scope="col">
       <tr>
@@ -26,44 +26,42 @@ echo '<div   class="container skin-light">
         </tr>
   </thead>
   <tbody scope="col">';
-
-include '../partials/mysqli_connect.php';
-$id=$_GET["id"];
-$query = "SELECT * FROM products WHERE proID ='$id'";
-            if ($result = mysqli_query($dbc, $query)){
-                
-                while ($row = mysqli_fetch_array($result)) {
+    if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
+        echo $_GET['id'];
+        include '../partials/mysqli_connect.php';
+        $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
+                if ($result = mysqli_query($dbc, $query)){
+                    $row = mysqli_fetch_array($result);
+                        echo'<tr>
+                        <th scope="col">
+                            '.$row['frontImage'].'
+                        </th>
+                        <th scope="col">
+                            '.$row['proName'].'
+                        </th>
+                        <th scope="col">
+                            '.$row['price'].'
+                        </th>
+                        <th scope="col">
+                            '.$row['quantity'].'
+                        </th>
+                        <th scope="col">
+                            '.$row['price'].'
+                        </th>
+                        <th scope="col">
+                            <a href="#" onclick="removeCart"><i class="fa fa-trash"> </i></a>
+                        </th>
+                    </tr>';
                     
-                    echo'<tr>
-                    <th scope="col">
-                        '.$row['frontImage'].'
-                    </th>
-                    <th scope="col">
-                        '.$row['proName'].'
-                    </th>
-                    <th scope="col">
-                        '.$row['price'].'
-                    </th>
-                    <th scope="col">
-                        '.$row['quantity'].'
-                    </th>
-                    <th scope="col">
-                        '.$row['price'].'
-                    </th>
-                    <th scope="col">
-                        <a href="#" onclick="removeCart"><i class="fa fa-trash"> </i></a>
-                    </th>
-                  </tr>';
-                
+                    
+                } else {
+                    echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
+                            '.</p><p>Câu truy vấn là: ' . $query . '</p>';
                 }
-            } else {
-                echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
-                        '.</p><p>Câu truy vấn là: ' . $query . '</p>';
-            }
-            
-            mysqli_close($dbc);
-    
-
+                
+                mysqli_close($dbc);
+        
+    }
   echo'</tbody>
   <tfoot scope="col">  
             

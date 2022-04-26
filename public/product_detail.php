@@ -66,7 +66,6 @@
                     
                     mysqli_close($dbc);
     }
-    echo '</main>'
 
 
 

@@ -43,43 +43,53 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Link</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Trang Chủ</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link  active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Hãng
           </a>
           <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Apple</a></li>
+            <li><a class="dropdown-item" href="#">Samsung</a></li>
+            <li><a class="dropdown-item" href="#">Huawei</a></li>
+            <li><a class="dropdown-item" href="#">Oppo</a></li>
           </ul>
         </li>
-      
+		<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="news.php">Tin Tức</a>
+        </li>
       </ul>
 	  <form class="d-flex mx-1">
         <input class="form-control me-2 search" type="search" placeholder="Tìm Kiếm" aria-label="Search">
         <a class="btn" type="submit"><i class="fa-solid fa-magnifying-glass iconheader"></i></a>
       </form>
 	  <div class="d-flex mx-1">
-	  
-	  	<a type="button" class="btn position-relative">
-		  	<i class="fa-solid fa-bell iconheader"></i>
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-				99+
-				
-			</span>
-		</a>
+	  <?php
+		
+		
+
+			echo '	<div class="dropdown">
+			<a class="btn colorwhite"  type="button" id="dropdownMenuButton0" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="fa-solid fa-bell iconheader"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+			99+</span></a>';
+		if (isset($_SESSION['username']) && $_SESSION['username']){	
+			echo '
+			<ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownMenuButton0">
+				<li><a class="dropdown-item" href="#">Đã đặt hàng thành công</a></li>
+				<li><a class="dropdown-item" href="#">Đơn hàng đã nhận</a></li>
+			</ul>
+			';
+			
+		}
+			echo'</div>';
+		?>
 	  </div>
 	  <div class="d-flex mx-1">
 		<?php
 			
 			if (isset($_SESSION['username']) && $_SESSION['username']){
-				echo '<a type="button" class="btn  position-relative"  data-bs-toggle="modal" data-bs-target="#CartModal">
+				echo '<a type="button" class="btn  position-relative" href="cart.php">
 				<i class="fa fa-shopping-cart iconheader" aria-hidden="true"></i>
 				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 					  99+

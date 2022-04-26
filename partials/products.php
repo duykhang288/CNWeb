@@ -63,12 +63,11 @@
                         while ($row = mysqli_fetch_array($result)) {
                     
                             // $htmlspecialchars = 'htmlspecialchars';
-                            // onclick="window.location.href="product_detail.php?id='.$row['proID'].'""
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
                                 <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
-                                    
+                                    <a href="product_detail.php?id='.$row['proID'].'">
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
-                                    
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
                                         <div class="price">'.$row['price'].' VNĐ</div>
@@ -85,7 +84,7 @@
                                     
                                 </div>
                             </div>';
-                        
+                             
                         }
                     } else {
                         echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
@@ -95,33 +94,35 @@
                     //mysqli_close($dbc);
             ?>
         </div>
-    </section>
-    
+    </section> 
     <section class="company">
-        <h3>SamSung</h3>
+        <h3>Samsung</h3>
         <div class="products row">
             <?php 
-                    $query = 'SELECT * FROM products where company="SAMSUNG"';
+                    $query = 'SELECT * FROM products where company="Samsung"';
                     // ORDER BY date_entered DESC
                     if ($result = mysqli_query($dbc, $query)){
                         
                         while ($row = mysqli_fetch_array($result)) {
                     
                             // $htmlspecialchars = 'htmlspecialchars';
-                            
-                            echo '<div class="product-item col-sm-3">
-                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
-                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                    
+                                <a href="product_detail.php?id='.$row['proID'].'">
+                                <img class="card-img-top" src="'.$row['frontImage'].'">
+                                </a>
+                                    
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Yêu thích</button>
+                                                <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Đặt Hàng</button>
-                                            </div>
+                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                            </div>  
                                             
                                         </div>
                                     </div>
@@ -151,19 +152,23 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             
-                            echo '<div class="product-item col-sm-3">
-                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
-                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                    
+                                <a href="product_detail.php?id='.$row['proID'].'">
+                                <img class="card-img-top" src="'.$row['frontImage'].'">
+                                </a>
+                                    
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Yêu thích</button>
+                                                <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Đặt Hàng</button>
-                                            </div>
+                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                            </div>  
                                             
                                         </div>
                                     </div>
@@ -193,19 +198,23 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             
-                            echo '<div class="product-item col-sm-3">
-                                <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
-                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                    
+                                <a href="product_detail.php?id='.$row['proID'].'">
+                                <img class="card-img-top" src="'.$row['frontImage'].'">
+                                </a>
+                                    
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Yêu thích</button>
+                                                <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom btn">Đặt Hàng</button>
-                                            </div>
+                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                            </div>  
                                             
                                         </div>
                                     </div>
