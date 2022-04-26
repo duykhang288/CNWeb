@@ -27,8 +27,8 @@
                                                 <button class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></button>
                                             </div>
                                             <div class="col-6">
-                                                <button class="btn-custom" data-toggle="modal" data-target="#CartModal"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
-                                            </div>
+                                                <button id="btn" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                            </div>  
                                             
                                         </div>
                                     </div>
