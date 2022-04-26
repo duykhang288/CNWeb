@@ -67,21 +67,22 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 	  <div class="d-flex mx-1">
 	  <?php
 		
-		if (isset($_SESSION['username']) && $_SESSION['username']){
+		
 
 			echo '	<div class="dropdown">
 			<a class="btn colorwhite"  type="button" id="dropdownMenuButton0" data-bs-toggle="dropdown" aria-expanded="false">
 			<i class="fa-solid fa-bell iconheader"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-			99+</span>';
-				
-			echo '</a>
+			99+</span></a>';
+		if (isset($_SESSION['username']) && $_SESSION['username']){	
+			echo '
 			<ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownMenuButton0">
 				<li><a class="dropdown-item" href="#">Đã đặt hàng thành công</a></li>
 				<li><a class="dropdown-item" href="#">Đơn hàng đã nhận</a></li>
 			</ul>
-			</div>';
+			';
 			
 		}
+			echo'</div>';
 		?>
 	  </div>
 	  <div class="d-flex mx-1">

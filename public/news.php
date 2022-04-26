@@ -1,18 +1,23 @@
 <?php
     include '../partials/header.php';
-    if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
-?>
-<?php
         include '../partials/mysqli_connect.php';
-        $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
+
+        echo '<h1 style="text-align: center">Tin tức</h1>';
+
+        $query = "SELECT * FROM news";
                     if ($result = mysqli_query($dbc, $query)){
                         
                         while ($row = mysqli_fetch_array($result)) {
                     
-                            
-                           
-                         
+                            echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
+                                <div class="card m-3 m-2 p-3 mb-5 border-1" style="width: 20rem;" >
+                                    <a href="product_detail.php?id='.$row['nID'].'">
+                                    <img class="card-img-top" src="'.$row['image'].'">
+                                    </a>
+                                    <h4>'.$row['title'].'</h4>
+                                    
+                                </div>
+                            </div>';
                         
                         }
                     } else {
@@ -21,8 +26,6 @@
                     }
                     
                     mysqli_close($dbc);
-    }
-    echo '</main>'
 
 
 
