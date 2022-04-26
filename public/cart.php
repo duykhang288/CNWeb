@@ -28,26 +28,30 @@ echo '<div   class="container skin-light">
   <tbody scope="col">';
 
 include '../partials/mysqli_connect.php';
-$query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
-$queryC = "SELECT * FROM cart WHERE proID ='{$_GET['id']}'";
-            if ($result = mysqli_query($dbc, $queryC)){
+$id=$_GET["id"];
+$query = "SELECT * FROM products WHERE proID ='$id'";
+            if ($result = mysqli_query($dbc, $query)){
                 
                 while ($row = mysqli_fetch_array($result)) {
                     
                     echo'<tr>
-                    <th scope="col" colspan="2">
-                        Sản Phẩm
+                    <th scope="col">
+                        '.$row['frontImage'].'
                     </th>
                     <th scope="col">
-                        Số lượng
+                        '.$row['proName'].'
                     </th>
                     <th scope="col">
-                        Giá
+                        '.$row['price'].'
                     </th>
                     <th scope="col">
-                        Thành Tiền
+                        '.$row['quantity'].'
                     </th>
                     <th scope="col">
+                        '.$row['price'].'
+                    </th>
+                    <th scope="col">
+                        <a href="#" onclick="removeCart"><i class="fa fa-trash"> </i></a>
                     </th>
                   </tr>';
                 
@@ -61,7 +65,8 @@ $queryC = "SELECT * FROM cart WHERE proID ='{$_GET['id']}'";
     
 
   echo'</tbody>
-  <tfoot scope="col">    
+  <tfoot scope="col">  
+            
   </tfoot>
 </table>
 </div>';

@@ -40,14 +40,4 @@ echo '<div class="modal fade bd-example-modal-xl" id="CartModal" tabindex="-1" r
     </div>
 </div> 
 </div>';
-
 ?>
-<script>
-
-$("#btn").click(function() {
-    window.onload = function(){
-        $("#CartModal").modal("show");
-    }
-});
-    
-</script>

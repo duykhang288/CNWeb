@@ -24,10 +24,10 @@
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <button class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></button>
+                                                <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button id="btn" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a href="cart.php?item='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
