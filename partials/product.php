@@ -1,9 +1,59 @@
 <div >
+    <?php
+    include '../partials/addcart.php';
+    
+    include '../partials/mysqli_connect.php';
+    if(isset($_GET['action']) && $_GET['action']=="add"){ 
+        echo $_GET['id'];
+        $id=$_GET['id']; 
+          
+        if(isset($_SESSION['cart'][$id])){ 
+              
+            $_SESSION['cart'][$id]['quantity']++; 
+              
+        }else{ 
+              
+            $sql_s="SELECT * FROM products 
+                WHERE proID='$id'"; 
+            $query_s=mysqli_query($dbc, "SELECT * FROM products 
+            WHERE proID='$id'"); 
+            if(mysqli_num_rows($query_s)!=0){ 
+                $row_s=mysqli_fetch_array($query_s); 
+                  
+                $_SESSION['cart'][$row_s['proID']]=array( 
+                        "quantity" => 1, 
+                        "price" => $row_s['price'] 
+                    ); 
+                  
+                  
+            }else{ 
+                  
+               echo 'loi';
+               exit();
+                  
+            } 
+              
+        } 
+          
+    } 
+    else {
+        echo 'loi';
+        exit();
+        
+    }
+  
+?>
+   
     <section class="company">
         <div>
             <h3>Apple</h3>
             
         </div>
+        <?php 
+        if(isset($message)){ 
+            echo "<h2>$message</h2>"; 
+        } 
+    ?> 
         <div class="products row container-fluid">
             <?php 
                     $query = 'SELECT * FROM products where company="Apple"';
@@ -27,7 +77,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?item='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a href="index.php?page=products&action=add&id='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
