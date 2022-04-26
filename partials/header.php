@@ -45,9 +45,6 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Trang Chủ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link  active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hãng
@@ -66,20 +63,30 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
         <a class="btn" type="submit"><i class="fa-solid fa-magnifying-glass iconheader"></i></a>
       </form>
 	  <div class="d-flex mx-1">
-	  
-	  	<a type="button" class="btn position-relative">
-		  	<i class="fa-solid fa-bell iconheader"></i>
-			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-				99+
+	  <?php
+		
+		if (isset($_SESSION['username']) && $_SESSION['username']){
+
+			echo '	<div class="dropdown">
+			<a class="btn colorwhite"  type="button" id="dropdownMenuButton0" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="fa-solid fa-bell iconheader"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+			99+</span>';
 				
-			</span>
-		</a>
+			echo '</a>
+			<ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownMenuButton0">
+				<li><a class="dropdown-item" href="#">Đã đặt hàng thành công</a></li>
+				<li><a class="dropdown-item" href="#">Đơn hàng đã nhận</a></li>
+			</ul>
+			</div>';
+			
+		}
+		?>
 	  </div>
 	  <div class="d-flex mx-1">
 		<?php
 			
 			if (isset($_SESSION['username']) && $_SESSION['username']){
-				echo '<a type="button" class="btn  position-relative"  data-bs-toggle="modal" data-bs-target="#CartModal">
+				echo '<a type="button" class="btn  position-relative" href="cart.php">
 				<i class="fa fa-shopping-cart iconheader" aria-hidden="true"></i>
 				  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 					  99+
