@@ -1,14 +1,16 @@
 <?php
     include '../partials/header.php';
-    if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
+    if (isset($_GET['id']) && ($_GET['id'] >= 0) ) {
         include '../partials/mysqli_connect.php';
-        $query = "SELECT * FROM news WHERE proID ='{$_GET['id']}'";
+        $query = "SELECT * FROM news WHERE nID ='{$_GET['id']}'";
                     if ($result = mysqli_query($dbc, $query)){
                         
                         while ($row = mysqli_fetch_array($result)) {
                     
-                            echo $row['title'].'<img src="'.$row['image'].'"'.$row['content'];
+                            echo '<h1 style="text-align: center">'.$row['title'].
+                            '</h1>
+                            <img style="padding-left: 200px;padding-right: 200px;width:100%;" src="'.$row['image'].'">
+                            '.$row['content'];
                          
                         
                         }
