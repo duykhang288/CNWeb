@@ -3,7 +3,7 @@
     include '../partials/header.php';
     
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
+       
 ?>
 <?php
         include '../partials/mysqli_connect.php';
@@ -14,7 +14,7 @@
                     
                             
                             echo '<h1>'.$row['company'].'</h1>
-                                <div class="container-fluid row">
+                                <div class="container-fluid row mb-5">
                                     <div class="col-lg-6 container-fluid">
                                       <div >
                                         <img src="'.$row['frontImage'].'" class="d-block w-100" alt="...">
@@ -22,7 +22,7 @@
                                     </div>
                                     <div class="col-lg-6 container-fluid">
                                         <h2>'.$row['proName'].'</h2>
-
+                                        <p class="h4">'.$row['price'].'đ</p>
                                         <p>'.$row['proDes'].'</p>
                                         <div class="row">
                                         <div class="col-6">
