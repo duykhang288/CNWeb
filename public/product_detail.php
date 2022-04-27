@@ -1,6 +1,8 @@
 <?php
-define('TITLE', 'Sản phẩm');
+
+    define('TITLE', 'Chi tiết');
     include '../partials/header.php';
+    
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
 ?>
 <?php
@@ -48,5 +50,6 @@ define('TITLE', 'Sản phẩm');
 
 ?>
 <?php
+    echo '</main>';
     include '../partials/footer.php';
 ?>
