@@ -17,17 +17,45 @@ if (isset($_GET['id'])  ) {
 
         while($row = mysqli_fetch_array($result)){
 
-        echo '<form action="edit_product.php" method="post">
-            <p><label>ID sản phẩm <input type="text" name="proID" value="' . $row['proID'] . '"></label></p>
-            <p><label>Tên sản phẩm <input type="text" name="proName" value="' . $row['proName'] . '"></label></p>
-            <p><label>Tên hãng <input type="text" name="company" value="' . $row['company'] . '"></label></p>
-            <p><label>Hình ảnh <input type="text" name="frontImage" value="' . $row['frontImage'] . '"></label></p>
-            <img width="150px" src="' . $row['frontImage'] . '">
-            <p><label>Mô tả <textarea name="proDes" rows="5" cols="30" >' .$row['proDes'] . '</textarea></label></p>
-            <p><label>Màu <input type="text" name="color" value="' . $row['color'] . '"></label></p>
-            <p><label>Số lượng <input type="number" name="quantity" value="' .$row['quantity'] . '"></label></p>
-            <p><label>Giá <input type="number" name="price" value="' . $row['price'] . '"></label></p>
-            <p><input type="submit" name="submit" value="Cập nhật Sản Phẩm này!"></p>
+        echo '
+            <form action="add_product.php" method="post">
+            <div class="form-group w-25">
+                <label>ID sản phẩm</label>
+                <input type="text" name="proID" class="form-control" value="'.$row['proID'] . '">
+            </div>
+            <div class="form-group w-25">
+                <label>Tên sản phẩm</label>
+                <input type="text" name="proName" class="form-control" value="' . $row['proName'] . '">
+            </div>
+            <div class="form-group w-25">
+                <label>Tên hãng</label>
+                <input type="text" name="company" class="form-control" value="' . $row['company'] . '">
+            </div>
+            <div class="form-group w-50">
+                <label>Hình ảnh</label>
+                <input type="text" name="frontImage" class="form-control" value="' . $row['frontImage'] . '">
+            </div>
+            <div class="form-group w-50">
+                <img width="150px" src="' . $row['frontImage'] . '">
+            </div>
+            <div class="form-group w-50">
+                <label>Mô tả</label>
+                <textarea type="text" name="proDes" class="form-control" rows="5">' .$row['proDes'] . '</textarea>
+            </div>
+            <div class="form-group w-25">
+                <label>Màu</label>
+                <input type="text" name="color" class="form-control" value="' . $row['color'] . '">
+            </div>
+            <div class="form-group w-25">
+                <label>Số lượng</label>
+                <input type="number" name="quantity" class="form-control" value="' .$row['quantity'] . '">
+            </div>
+            <div class="form-group w-25">
+                <label>Giá</label>
+                <input type="number" name="price"  class="form-control mb-2" value="' . $row['price'] . '">
+            </div>
+
+            <input class="btn-custom w-25" type="submit" name="submit" value="Sửa sản phẩm này!">
             </form>';
         }
     } else {
@@ -43,16 +71,37 @@ if (isset($_GET['id'])  ) {
     }
 
     if (!$problem) {
-        $query = "UPDATE products SET proID=?, proName=?, company=?, frontImage=?, endImage=?, proDes=?, color=?, quantity=?, price=? WHERE proID=?";
-        $stmt = mysqli_prepare($dbc, $query);
-        mysqli_stmt_bind_param($stmt, 'ssii', $_POST['proID'], $_POST['proName'], $_POST['company'], $_POST['frontImage'], $_POST['endImage'], $_POST['proDes'], $_POST['color'], $_POST['quantity'], $_POST['price']);
-
-        if ($result = mysqli_stmt_execute($stmt)) {
-            echo '<p>Sản phẩm này đã được cập nhật.</p>';
-        } else {
-            echo '<p class="error">Không thể cập nhật Sản phẩm này vì: <br>' . mysqli_error($dbc) .
-                '.</p><p>Câu truy vấn là: ' . $query . '</p>';
-        }
+        if (isset($_POST['proID'])){
+			$id = $_POST['proID'];
+		}
+		if (isset($_POST['proName'])){
+			$name = $_POST['proName'];
+		}
+		if (isset($_POST['company'])){
+			$company = $_POST['company'];
+		}
+		if (isset($_POST['frontImage'])){
+			$img = $_POST['frontImage'];
+		}
+		if (isset($_POST['proDes'])){
+			$des = $_POST['proDes'];
+		}
+		if (isset($_POST['color'])){
+			$color = $_POST['color'];
+		}
+		if (isset($_POST['quantity'])){
+			$quantity = $_POST['quantity'];
+		}
+		if (isset($_POST['price'])){
+			$price = $_POST['price'];
+		}
+        if (mysqli_query($dbc," UPDATE products SET proID=$id, proName=$name, company=$company, frontImage=$img, proDes=$des, color=$color, quantity=$quantity, price=$price WHERE proID='{$row['proID']}'"))
+        {
+			echo '<p class="text-success">Đã sửa được sản phẩm</p>';
+		}else {
+			echo '<p class="error ">Không thể sửa sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
+		}
+		mysqli_close($dbc);
     }
 } else {
     echo '<p class="error">Đã có lỗi xảy ra.</p>';
