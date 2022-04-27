@@ -52,7 +52,7 @@ echo '<div   class="container skin-light">
                         
                     </tr>
                       
-                    <button  type="submit" name="checkout" class="btn" style="background-color: #494949 !important; color: #FFFFFF;">Đặt hàng</button>
+                   
                     </div>'
                     ;
                     

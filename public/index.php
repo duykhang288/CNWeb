@@ -94,25 +94,25 @@ include '../partials/mysqli_connect.php';
                           <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <ul class="list-group list-group-flush" id="sidebarlist">
-                                    <li class="list-group-item"> <a class="text-decoration-none" href="">Black Jack - 03 </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Thung Lũng Bất Hạnh </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">One Piece - Tập 96 </a></li>
+                                    <li class="list-group-item"> <a class="text-decoration-none" href="">Iphone 13 ProMax </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 13 Pro </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 11 </a></li>
                              
                                   </ul>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                 <ul class="list-group list-group-flush"  id="sidebarlist">
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Dr.Stone - Tập 8 </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">One Piece - Tập 96 </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Hoàng Tử Bé </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 13 ProMax</a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 13 </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 13 Pro </a></li>
                                 
                                   </ul>
                             </div>
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <ul class="list-group list-group-flush"  id="sidebarlist">
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Giết Con Chim Nhại </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Không Gia Đình </a></li>
-                                    <li class="list-group-item"><a class="text-decoration-none" href="">Người Đua Diều </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 12 </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 13 Pro Max </a></li>
+                                    <li class="list-group-item"><a class="text-decoration-none" href="">Iphone 11 </a></li>
                               
                                   </ul>
                             </div>

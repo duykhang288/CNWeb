@@ -44,7 +44,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
+                                            <a href="checkout.php?id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -232,7 +232,7 @@
                                             <button class="btn-custom btn">Yêu thích</button>
                                         </div>
                                         <div class="col-6">
-                                            <button class="btn-custom btn">Đặt Hàng</button>
+                                            <button class="btn-custom btn" href="checkout.php">Đặt Hàng</button>
                                         </div>
                                     </div>
                                 </div>

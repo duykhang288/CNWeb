@@ -1,6 +1,6 @@
 <?php
 define('TITLE', 'Đăng Nhập');
-include '../partials/header.php';
+
 
 
 if (isset($_POST['dangnhap'])) 
@@ -27,6 +27,7 @@ if (isset($_POST['dangnhap']))
 			
 		</div>
 	</div>';
+        include '../partials/footer.php'; 
         exit;
     }
      
@@ -34,7 +35,15 @@ if (isset($_POST['dangnhap']))
     $row = mysqli_fetch_array($query);
      
     if ($password != $row['Pass']) {
-        echo "Mật khẩu không đúng. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        echo '<div class="row container-fluid h-50 ">
+		<div class="col d-flex justify-content-center shadow h-50" style="background-color:#F8F8F8; border-radius:30px; margin-top: 100px; margin-bottom:100px;"  >
+	<h1 >
+		Mật khẩu không đúng, vui lòng nhập lại. <a href="login.php">Trở lại</a>
+	</h1>
+			
+		</div>
+	</div>';
+        include '../partials/footer.php'; 
         exit;
     }
      
@@ -45,6 +54,9 @@ if (isset($_POST['dangnhap']))
     
 }
 ?>
+        <?php
+        include '../partials/header.php';
+        ?>
         <link rel="stylesheet" href="css/login.css">
         <h1>Đăng nhập</h1>
         <section class="intro ">
