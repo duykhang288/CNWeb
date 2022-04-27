@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="col-lg-6 container-fluid">
                                         <h2>'.$row['proName'].'</h2>
-                                        <p class="h4">'.$row['price'].'đ</p>
+                                        <p class="h4">'.number_format($row['price'],0,3).'đ</p>
                                         <p>'.$row['proDes'].'</p>
                                         <div class="row">
                                         <div class="col-6">
