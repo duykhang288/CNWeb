@@ -11,6 +11,8 @@
 .price {
   font-weight: bold;
   color: red!important;
+  padding-bottom:10px;
+  font-size: 18px;
 }
 .btn-custom {
   display: inline-block;
@@ -43,3 +45,9 @@
   color: #fff;
   background-color: #45bde9;
 }
+h5{ 
+  height:48px;
+}
+.checked {
+  color: orange;
+} 

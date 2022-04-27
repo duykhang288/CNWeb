@@ -10,7 +10,6 @@
     <section class="company">
         <div>
             <h3>Apple</h3>
-            
         </div>
         <?php 
         if(isset($message)){ 
@@ -18,6 +17,7 @@
         } 
     ?> 
         <div class="products row container-fluid">
+         <!-- onclick="addCart("<?php echo $row['proID']?>")" -->
             <?php 
                     $query = 'SELECT * FROM products where company="Apple"';
                     // ORDER BY date_entered DESC
@@ -27,12 +27,17 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     <a href="product_detail.php?id='.$row['proID'].'">
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
@@ -47,7 +52,7 @@
                                     
                                 </div>
                             </div>';
-                             
+                            
                         }
                     } else {
                         echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
@@ -70,7 +75,7 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">
@@ -116,7 +121,7 @@
                             // $htmlspecialchars = 'htmlspecialchars';
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">
@@ -162,7 +167,7 @@
                             // $htmlspecialchars = 'htmlspecialchars';
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">

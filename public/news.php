@@ -9,16 +9,11 @@
                         
                         while ($row = mysqli_fetch_array($result)) {
                     
-                            echo '<div class=" col-md-4 col-lg-3 col-sm-6 col-3">
-                                <div class="card m-3 m-2 p-3 mb-5 border-1" style="width: 20rem;" >
-                                    <a href="news_detail.php?id='.$row['nID'].'">
-                                    <img class="card-img-top" src="'.$row['image'].'">
-                                    </a>
-                                    <h4>'.$row['title'].'</h4>
-                                    
-                                </div>
+                            echo'<div class=" col-md-4 col-lg-3 col-sm-6 col-3 m-3 p-3 border">
+                            <a href="news_detail.php?id='.$row['nID'].'">
+                            <img width="200px" height="150px" src="'.$row['image'].'" class="d-block w-100 rounded border border-light"></a>
+                            <h5 class="mt-3 mx-3 ">'.$row['title'].'</h5>
                             </div>';
-                        
                         }
                     } else {
                         echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
