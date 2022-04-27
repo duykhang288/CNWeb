@@ -2,7 +2,6 @@
 define('TITLE', 'Đăng Ký');
 include '../partials/header.php';
 ?>
-
         <h1>Đăng ký</h1>
         <section class="intro">
             <div class="bg-image h-100">
