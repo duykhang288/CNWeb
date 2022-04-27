@@ -20,10 +20,6 @@ if (isset($_GET['id'])) {
         echo '
             <form action="edit_product.php" method="post">
             <div class="form-group w-25">
-                <label>ID sản phẩm</label>
-                <input type="text" name="proID" class="form-control" value="'.$row['proID'] . '">
-            </div>
-            <div class="form-group w-25">
                 <label>Tên sản phẩm</label>
                 <input type="text" name="proName" class="form-control" value="' . $row['proName'] . '">
             </div>
@@ -64,16 +60,14 @@ if (isset($_GET['id'])) {
     }
 } 
 elseif (isset($_POST['id'])) {
+    echo $_POST['id'];
     $problem = FALSE;
-    if (!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
+    if (!empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
         echo '<p class="error">Hãy gõ vào tất cả các ô trống !</p>';
         $problem = TRUE;
     }
 
     if (!$problem) {
-        if (isset($_POST['proID'])){
-			$id = $_POST['proID'];
-		}
 		if (isset($_POST['proName'])){
 			$name = $_POST['proName'];
 		}
@@ -95,9 +89,8 @@ elseif (isset($_POST['id'])) {
 		if (isset($_POST['price'])){
 			$price = $_POST['price'];
 		}
-        if (mysqli_query($dbc," UPDATE products SET proID='$id', proName='$name', company='$company', frontImage='$img', proDes='$des', color='$color', quantity='$quantity', price='$price' WHERE proID='{$row['proID']}'"))
+        if (mysqli_query($dbc," UPDATE products SET proName='$name', company='$company', frontImage='$img', proDes='$des', color='$color', quantity='$quantity', price='$price' WHERE proID='{$row['proID']}'"))
         {   
-            mysqli_query($dbc," DELETE FROM products WHERE proID={$row['proID']} ");
 			echo '<p class="text-success">Đã sửa được sản phẩm</p>';
 		}else {
 			echo '<p class="error ">Không thể sửa sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
