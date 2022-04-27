@@ -1,7 +1,7 @@
 <?php
+define('TITLE', 'Sản phẩm');
     include '../partials/header.php';
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
 ?>
 <?php
         include '../partials/mysqli_connect.php';

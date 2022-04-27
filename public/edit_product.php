@@ -9,35 +9,36 @@ include '../partials/check_admin.php';
 
 include '../partials/mysqli_connect.php';
 
-if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) {
+if (isset($_GET['id'])  ) {
 
-    $query = "SELECT * FROM products WHERE proID = {$_GET['id']}";
+    $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
 
     if ($result = mysqli_query($dbc, $query)) {
 
-        $row = mysqli_fetch_array($result);
+        while($row = mysqli_fetch_array($result)){
 
         echo '<form action="edit_product.php" method="post">
-            <p><label>ID sản phẩm <input type="text" name="proID" value="' . $row['proID'] . '></label></p>
-            <p><label>Tên sản phẩm <input type="text" name="proName" value="' . $row['proName'] . '></label></p>
-            <p><label>Tên hãng <input type="text" name="company" value="' . $row['company'] . '></label></p>
-            <p><label>Hình ảnh <input type="text" name="frontImage" value="' . htmlspecialchars($row['frontImage']) . '></label></p>
-            <p><label>Hình ảnh khác <input type="text" name="endImage" value="' . htmlspecialchars($row['endImage']) . '></label></p>
-            <p><label>Mô tả <textarea name="proDes" rows="5" cols="30" value="' . htmlspecialchars($row['proDes']) . '></textarea></label></p>
-            <p><label>Màu <input type="text" name="color" value="' . htmlspecialchars($row['color']) . '></label></p>
-            <p><label>Số lượng <input type="number" name="quantity" value="' . htmlspecialchars($row['quantity']) . '></label></p>
-            <p><label>Giá <input type="number" name="price" value="' . htmlspecialchars($row['price']) . '></label></p>
+            <p><label>ID sản phẩm <input type="text" name="proID" value="' . $row['proID'] . '"></label></p>
+            <p><label>Tên sản phẩm <input type="text" name="proName" value="' . $row['proName'] . '"></label></p>
+            <p><label>Tên hãng <input type="text" name="company" value="' . $row['company'] . '"></label></p>
+            <p><label>Hình ảnh <input type="text" name="frontImage" value="' . $row['frontImage'] . '"></label></p>
+            <img width="150px" src="' . $row['frontImage'] . '">
+            <p><label>Mô tả <textarea name="proDes" rows="5" cols="30" >' .$row['proDes'] . '</textarea></label></p>
+            <p><label>Màu <input type="text" name="color" value="' . $row['color'] . '"></label></p>
+            <p><label>Số lượng <input type="number" name="quantity" value="' .$row['quantity'] . '"></label></p>
+            <p><label>Giá <input type="number" name="price" value="' . $row['price'] . '"></label></p>
             <p><input type="submit" name="submit" value="Cập nhật Sản Phẩm này!"></p>
             </form>';
+        }
     } else {
         echo '<p class="error">Không thể lấy được sản phẩm này vì:<br>' . mysqli_error($dbc) . 
                 '.</p><p>Câu truy vấn này là: ' . $query . '</p>';
     }
-} elseif (isset($_POST['id']) && is_numeric($_POST['id']) && ($_POST['id'] > 0)) {
+} elseif (isset($_POST['id'])) {
 
     $problem = FALSE;
     if (!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
-        echo '<p class="error">Hãy gõ vào tất cả !</p>';
+        echo '<p class="error">Hãy gõ vào tất cả các ô trống !</p>';
         $problem = TRUE;
     }
 
