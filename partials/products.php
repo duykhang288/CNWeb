@@ -1,8 +1,7 @@
-<div >
+<div>
     <section class="company">
         <div>
             <h3>Apple</h3>
-            
         </div>
         <div class="products row container-fluid">
             <?php 
