@@ -19,14 +19,30 @@
         echo "<p>$password </p>";
           
     if (mysqli_num_rows(mysqli_query($dbc,"SELECT username FROM account WHERE username='$username'")) > 0){
-        echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        echo '<div class="row container-fluid h-50 ">
+		<div class="col d-flex justify-content-center shadow h-50" style="background-color:#F8F8F8; border-radius:30px; margin-top: 100px; margin-bottom:100px;"  >
+	<h1 >
+		Tên đăng nhập đã có người dùng <a href="register.php">Tr</a>
+	</h1>
+			
+		</div>
+	</div>';
+    include '../partials/footer.php';
         exit;
     }
           
 
     if (mysqli_num_rows(mysqli_query($dbc,"SELECT Mail FROM account WHERE Mail='$email'")) > 0)
     {
-        echo "Email này đã có người dùng. Vui lòng chọn Email khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        echo '<div class="row container-fluid h-50 ">
+		<div class="col d-flex justify-content-center shadow h-50" style="background-color:#F8F8F8; border-radius:30px; margin-top: 100px; margin-bottom:100px;"  >
+	<h1 >
+		Email này đã có người dùng. <a href="register.php">Trở lại</a>
+	</h1>
+			
+		</div>
+	</div>';
+    include '../partials/footer.php';
         exit;
     }
     
@@ -38,7 +54,15 @@ VALUES ('$username', '$password', '$email' , '1')");
 
     
     
-        echo "Quá trình đăng ký thành công. <a href='/'>Về trang chủ</a>";
+        echo '<div class="row container-fluid h-50 ">
+		<div class="col d-flex justify-content-center shadow h-50" style="background-color:#F8F8F8; border-radius:30px; margin-top: 100px; margin-bottom:100px;"  >
+	<h1 >
+		Đăng ký thành công. <a href="login.php">Đăng nhập</a>
+	</h1>
+			
+		</div>
+	</div>';
+    include '../partials/footer.php';
     }
     else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='register.php'>Thử lại</a>";

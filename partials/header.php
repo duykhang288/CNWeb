@@ -123,13 +123,18 @@ include __DIR__ . '/../functions.php'; ?><!doctype html>
 			echo '</a>
 			<ul class="dropdown-menu shadow-sm" aria-labelledby="dropdownMenuButton1">
 				<li><a class="dropdown-item" href="#">Thông tin <i class="fa-solid fa-circle-info"></i></a></li>';
-			if($_SESSION['Adminn'] ==0) {
-				echo'<li><a class="dropdown-item" href="admin_products.php">Sản phẩm <i class="fa-solid fa-mobile-screen"></i></a></li>';
-			}
-			echo'<li><a class="dropdown-item" href="#">Đơn hàng <i class="fa-solid fa-chart-simple"></i></a></li>
-				<li><a class="dropdown-item" href="logout.php">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
-				</ul>
-			</div>';
+			if (is_administrator()) {
+					
+					echo'<li><a class="dropdown-item" href="admin_products.php">Sản phẩm <i class="fa-solid fa-mobile-screen"></i></a></li>';
+					
+				}
+			else {
+			echo'<li><a class="dropdown-item" href="#">Đơn hàng <i class="fa-solid fa-chart-simple"></i></a></li>'; }
+			echo  '<li><a class="dropdown-item" href="logout.php">Đăng xuất <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+			</ul>
+		</div>';
+		
+		
 			
 		}
 		else{

@@ -1,7 +1,7 @@
 <?php
 define('TITLE', 'Đăng Nhập');
 
-
+include '../partials/header.php';
 
 if (isset($_POST['dangnhap'])) 
 {
@@ -27,7 +27,6 @@ if (isset($_POST['dangnhap']))
 			
 		</div>
 	</div>';
-        include '../partials/footer.php'; 
         exit;
     }
      
@@ -43,7 +42,7 @@ if (isset($_POST['dangnhap']))
 			
 		</div>
 	</div>';
-        include '../partials/footer.php'; 
+    include '../partials/footer.php';
         exit;
     }
      
@@ -54,9 +53,6 @@ if (isset($_POST['dangnhap']))
     
 }
 ?>
-        <?php
-        include '../partials/header.php';
-        ?>
         <link rel="stylesheet" href="css/login.css">
         <h1>Đăng nhập</h1>
         <section class="intro ">
