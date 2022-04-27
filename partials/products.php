@@ -38,13 +38,13 @@
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star"></span>
-                                        <div class="price">'.$row['price'].' VNĐ</div>
+                                        <div class="price">'. number_format($row['price'],0,3).' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="checkout.php?id='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
                                             </div>  
                                             
                                         </div>
