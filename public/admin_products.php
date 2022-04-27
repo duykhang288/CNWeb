@@ -50,7 +50,7 @@ echo '<div   class="container skin-light">
                         <a type="button" style="width:100px;" class="btn-admin" href="edit_product.php?id='.$row['proID'].'">Sửa</a>
                         </div
                         <div class="col-6 style="text-align: center;"">
-                        <a type="button" style="width:100px;" class="btn-admin" href="delete_product.php?id='.$row['proID'].'">Xóa</a>
+                        <a type="button" style="width:100px;" class="btn-admin" onclick="deleteP(' . $row['proID'] . ')">Xóa</a>
                         </div
                         </div>
 			            
@@ -75,3 +75,22 @@ echo '<div   class="container skin-light">
 
 include '../partials/footer.php';
 ?>
+<script type="text/javascript">
+		function deletesp(id) {
+			console.log(id);
+			var option = confirm('Bạn có muốn xóa không?')
+			if (!option) {
+				return;
+			}
+            else {
+                mysqli_query($dbc," DELETE FROM products WHERE proID={$row['proID']}'")
+            }
+
+			$.post('delete_product.php', {
+				'id': id,
+				'action': 'deleteP'
+			}, function(data) {
+				location.reload()
+			})
+		}
+	</script>

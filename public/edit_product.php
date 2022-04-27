@@ -96,7 +96,7 @@ if (isset($_GET['id'])  ) {
 			$price = $_POST['price'];
 		}
         if (mysqli_query($dbc," UPDATE products SET proID=$id, proName=$name, company=$company, frontImage=$img, proDes=$des, color=$color, quantity=$quantity, price=$price WHERE proID='{$row['proID']}'"))
-        {
+        { 
 			echo '<p class="text-success">Đã sửa được sản phẩm</p>';
 		}else {
 			echo '<p class="error ">Không thể sửa sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';

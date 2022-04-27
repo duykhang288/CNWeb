@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="col-lg-6 container-fluid">
                                         <h2>'.$row['proName'].'</h2>
-                                        <div class="price">'.$row['price'].'VNĐ</div>
+                                        <p class="h4">'.number_format($row['price'],0,3).'đ</p>
                                         <p>'.$row['proDes'].'</p>
                                         <ol class="list-group list-group-numbered">
                                           <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -60,7 +60,7 @@
                                         <button class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></button>
                                     </div>
                                     <div class="col-6">
-                                        <button class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                    <a href="checkout.php?id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                     </div>
                                             
                                       </div>

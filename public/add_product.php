@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isset($_POST['price'])){
 			$price = $_POST['price'];
 		}
-		
+
 		if (mysqli_query($dbc,"INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES ('$id', '$name', '$company', '$img', '$des', '$color', '$quantity', '$price')")){
 			echo '<p class="text-success">Đã thêm được sản phẩm</p>';
 		}else {
