@@ -39,7 +39,6 @@ echo '<div   class="container skin-light">
                             '.$row['proName'].'
                         </th>
                         <th scope="col">
-                        
                         <input type="number" name="price" value="1">
                         </th>
                         <th scope="col">

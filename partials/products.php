@@ -20,6 +20,11 @@
                                     </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
                                         <div class="price">'.$row['price'].' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
