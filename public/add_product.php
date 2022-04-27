@@ -12,20 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
 
 		include "../partials/mysqli_connect.php";
-
-		// $query = "INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-		// $stmt = mysqli_prepare($dbc, $query);
-		// mysqli_stmt_bind_param($stmt,'sssd' , $_POST['proID'], $_POST['proName'], $_POST['company'], $_POST['frontImage'], $_POST['proDes'], $_POST['color'], $_POST['quantity'], $_POST['price']);
-
-		// mysqli_stmt_execute($stmt);
-		
-		// if (mysqli_stmt_affected_rows($stmt) == 1) {
-		// 	echo '<p>Đã thêm được sản phẩm</p>';
-		// } else {
-		// 	echo '<p class="error ">Không thể thêm sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
-		// }
-		// mysqli_close($dbc);
-
 		if (isset($_POST['proID'])){
 			$id = $_POST['proID'];
 		}
@@ -50,9 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isset($_POST['price'])){
 			$price = $_POST['price'];
 		}
-		$query = "INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES ('$id', '$name', '$company', '$img', '$des', '$color', '$quantity', '$price')";
-		$stmt = mysqli_prepare($dbc, $query);
-
+		
+		if (mysqli_query($dbc,"INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES ('$id', '$name', '$company', '$img', '$des', '$color', '$quantity', '$price')")){
+			echo '<p class="text-success">Đã thêm được sản phẩm</p>';
+		}else {
+			echo '<p class="error ">Không thể thêm sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
+		}
 		mysqli_close($dbc);
 
 	} else {
