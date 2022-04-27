@@ -63,7 +63,11 @@ echo '<div   class="container skin-light">
     }
   echo'</tbody>
   <tfoot scope="col">  
-            
+  <tr>
+          <th scope="col" colspan="6" style="text-align: center;">
+          <button width="100px" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a> 
+          </th>
+
   </tfoot>
 </table>
 </div>';
