@@ -27,23 +27,22 @@ echo '<div   class="container skin-light">
   </thead>
   <tbody scope="col">';
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
         include '../partials/mysqli_connect.php';
         $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
                 if ($result = mysqli_query($dbc, $query)){
                     $row = mysqli_fetch_array($result);
                         echo'<tr>
                         <th scope="col">
-                            '.$row['frontImage'].'
+                            <img width="250px" src="'.$row['frontImage'].'">
                         </th>
                         <th scope="col">
                             '.$row['proName'].'
                         </th>
                         <th scope="col">
-                            '.$row['price'].'
+                        <input type="number" name="price" value="1">
                         </th>
                         <th scope="col">
-                            '.$row['quantity'].'
+                            '.$row['price'].'
                         </th>
                         <th scope="col">
                             '.$row['price'].'
