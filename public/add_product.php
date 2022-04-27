@@ -9,12 +9,9 @@ echo '<h2>Thêm một Sản phẩm</h2>';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	if(!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
+	if(!empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
 
 		include "../partials/mysqli_connect.php";
-		if (isset($_POST['proID'])){
-			$id = $_POST['proID'];
-		}
 		if (isset($_POST['proName'])){
 			$name = $_POST['proName'];
 		}
@@ -37,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$price = $_POST['price'];
 		}
 
-		if (mysqli_query($dbc,"INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES ('$id', '$name', '$company', '$img', '$des', '$color', '$quantity', '$price')")){
+		if (mysqli_query($dbc,"INSERT INTO products (proName, company, frontImage, proDes, color, quantity, price) VALUES ('$name', '$company', '$img', '$des', '$color', '$quantity', '$price')")){
 			echo '<p class="text-success">Đã thêm được sản phẩm</p>';
 		}else {
 			echo '<p class="error ">Không thể thêm sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
@@ -51,10 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 <form action="add_product.php" method="post">
-  <div class="form-group w-25">
-    <label>ID sản phẩm</label>
-    <input type="text" name="proID" size="20" class="form-control" >
-  </div>
   <div class="form-group w-25">
     <label>Tên sản phẩm</label>
     <input type="text" name="proName" class="form-control">
