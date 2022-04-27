@@ -9,7 +9,7 @@ echo '<div   class="container skin-light">
 <table class="table">
   <thead scope="col">
       <tr>
-          <th scope="col" colspan="2">
+          <th scope="col" colspan="2" style="text-align: center;">
               Sản Phẩm
           </th>
           <th scope="col">
@@ -39,6 +39,7 @@ echo '<div   class="container skin-light">
                             '.$row['proName'].'
                         </th>
                         <th scope="col">
+                        
                         <input type="number" name="price" value="1">
                         </th>
                         <th scope="col">

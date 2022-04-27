@@ -14,7 +14,7 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     <a href="product_detail.php?id='.$row['proID'].'">
                                     <img class="card-img-top" src="'.$row['frontImage'].'">
                                     </a>
@@ -57,7 +57,7 @@
                     
                             // $htmlspecialchars = 'htmlspecialchars';
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">
@@ -103,7 +103,7 @@
                             // $htmlspecialchars = 'htmlspecialchars';
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">
@@ -149,7 +149,7 @@
                             // $htmlspecialchars = 'htmlspecialchars';
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
-                                <div class="card m-3 m-2 shadow p-3 mb-5  border-0" style="width: 18rem;" >
+                                <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
                                     
                                 <a href="product_detail.php?id='.$row['proID'].'">
                                 <img class="card-img-top" src="'.$row['frontImage'].'">
