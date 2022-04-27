@@ -1,4 +1,5 @@
 <?php
+
     define('TITLE', 'Chi tiết');
     include '../partials/header.php';
     

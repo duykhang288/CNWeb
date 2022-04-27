@@ -1,96 +1,73 @@
 <?php
-    include '../partials/header.php';
+define('TITLE', 'Giỏ Hàng');
+include '../partials/header.php';
+
+include '../partials/mysqli_connect.php';
+
+echo '<div   class="container skin-light">
+<h1 style="text-align: center;">GIỎ HÀNG</h1>
+<table class="table">
+  <thead scope="col">
+      <tr>
+          <th scope="col" colspan="2" style="text-align: center;">
+              Sản Phẩm
+          </th>
+          <th scope="col">
+              Số lượng
+          </th>
+          <th scope="col">
+              Giá
+          </th>
+          <th scope="col">
+              Thành Tiền
+          </th>
+          <th scope="col">
+          </th>
+        </tr>
+  </thead>
+  <tbody scope="col">';
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
-        echo $_GET['id'];
-?>
-<?php
         include '../partials/mysqli_connect.php';
         $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
-                    if ($result = mysqli_query($dbc, $query)){
-                        
-                        while ($row = mysqli_fetch_array($result)) {
+                if ($result = mysqli_query($dbc, $query)){
+                    $row = mysqli_fetch_array($result);
+                        echo'<tr>
+                        <th scope="col">
+                            <img width="250px" src="'.$row['frontImage'].'">
+                        </th>
+                        <th scope="col">
+                            '.$row['proName'].'
+                        </th>
+                        <th scope="col">
+                        <input type="number" name="price" value="1">
+                        </th>
+                        <th scope="col">
+                            '.$row['price'].'
+                        </th>
+                        <th scope="col">
+                            '.$row['price'].'
+                        </th>
+                        <th scope="col">
+                            <a href="#" onclick="removeCart"><i class="fa fa-trash"> </i></a>
+                        </th>
+                    </tr>';
                     
-                            
-                            echo '<h1>'.$row['company'].'</h1>
-                                <div class="container-fluid row">
-                                    <div class="col-lg-6 container-fluid">
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                     
-                                    </div>
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="'.$row['frontImage'].'" class="d-block w-100" alt="...">
-                                      </div>';
-                            if($row['endImage']!=""){
-                                echo '<div class="carousel-item">
-                                <img src="'.$row['endImage'].'" class="d-block w-100" alt="...">
-                              </div>';
-                            }
-                                      
-                            echo       '</div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                  </div>
-                                    </div>
-                                    <div class="col-lg-6 container-fluid">
-                                        <h2>'.$row['proName'].'</h2>
-
-                                        <p>'.$row['proDes'].'</p>
-                                        <div class="row">
-                                        <div class="col-6">
-                                        <button class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></button>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="btn-custom" data-toggle="modal" data-target="#CartModal"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
-                                    </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div
-                                <table class="table table-fixed">
-                                <thead scope="col">
-                                    <tr>
-                                        <th scope="col" colspan="2">
-                                            Sản Phẩm
-                                        </th>
-                                        <th scope="col">
-                                            Số lượng
-                                        </th>
-                                        <th scope="col">
-                                            Giá
-                                        </th>
-                                        <th scope="col">
-                                            Thành Tiền
-                                        </th>
-                                        <th scope="col">
-                                        </th>
-                                </thead>
-                                <tbody scope="col" id="tb2">
-                            </table>';
-                         
-                        
-                        }
-                    } else {
-                        echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
-                                '.</p><p>Câu truy vấn là: ' . $query . '</p>';
-                    }
                     
-                    mysqli_close($dbc);
+                } else {
+                    echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
+                            '.</p><p>Câu truy vấn là: ' . $query . '</p>';
+                }
+                
+                mysqli_close($dbc);
+        
     }
+  echo'</tbody>
+  <tfoot scope="col">  
+            
+  </tfoot>
+</table>
+</div>';
 
 
-
-?>
-<?php
-    echo '</main>';
-    include '../partials/footer.php';
+include '../partials/footer.php';
 ?>
