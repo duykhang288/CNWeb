@@ -12,7 +12,7 @@ if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
 <script type="text/javascript">
 localStorage.setItem('proID', '<?php echo $_SESSION['proID'];?>');  
 location.href="cart.php";
-function addCart(code) {
+function addCart(id) {
   alert("Thêm thành công!");
 }
 </script>

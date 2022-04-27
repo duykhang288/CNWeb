@@ -4,6 +4,7 @@
             <h3>Apple</h3>
         </div>
         <div class="products row container-fluid">
+         <!-- onclick="addCart("<?php echo $row['proID']?>")" -->
             <?php 
                     $query = 'SELECT * FROM products where company="Apple"';
                     // ORDER BY date_entered DESC
@@ -38,7 +39,7 @@
                                     
                                 </div>
                             </div>';
-                             
+                            
                         }
                     } else {
                         echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
