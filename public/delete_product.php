@@ -1,6 +1,6 @@
 <?php
 
-define('TITLE', 'Xóa một Trích dẫn');
+define('TITLE', 'Xóa một Sản phẩm');
 include '../partials/header.php';
 
 echo '<h2>Xóa một Trích dẫn</h2>';

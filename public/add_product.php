@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		include "../partials/mysqli_connect.php";
 
-		$query = "INSERT INTO products (proID, proName, company, frontImage, endImage, proDes, color, quantity, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO products (proID, proName, company, frontImage, proDes, color, quantity, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 		$stmt = mysqli_prepare($dbc, $query);
-		mysqli_stmt_bind_param($stmt, 'ssi', $_POST['proID'], $_POST['proName'], $_POST['company'], $_POST['frontImage'], $_POST['endImage'], $_POST['proDes'], $_POST['color'], $_POST['quantity'], $_POST['price']);
+		mysqli_stmt_bind_param($stmt, 'ssi', $_POST['proID'], $_POST['proName'], $_POST['company'], $_POST['frontImage'], $_POST['proDes'], $_POST['color'], $_POST['quantity'], $_POST['price']);
 
 		mysqli_stmt_execute($stmt);
 
@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p><label>Tên sản phẩm <input type="text" name="proName"></label></p>
 	<p><label>Tên hãng <input type="text" name="company"></label></p>
 	<p><label>Hình ảnh <input type="text" name="frontImage"></label></p>
-	<p><label>Hình ảnh khác <input type="text" name="endImage"></label></p>
 	<p><label>Mô tả <textarea name="proDes" rows="5" cols="30"></textarea></label></p>
 	<p><label>Màu <input type="text" name="color"></label></p>
 	<p><label>Số lượng <input type="number" name="quantity"></label></p>

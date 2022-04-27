@@ -1,5 +1,5 @@
 <?php
-
+define('TITLE', 'Giỏ Hàng');
 include '../partials/header.php';
 
 include '../partials/mysqli_connect.php';

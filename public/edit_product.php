@@ -1,9 +1,9 @@
 <?php
 
-define('TITLE', 'Sửa một Trích dẫn');
+define('TITLE', 'Sửa một Sản Phẩm');
 include '../partials/header.php';
 
-echo '<h2>Sửa một Trích dẫn</h2>';
+echo '<h2>Sửa một Sản phẩm</h2>';
 
 include '../partials/check_admin.php';
 
@@ -18,9 +18,9 @@ if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) {
         $row = mysqli_fetch_array($result);
 
         echo '<form action="edit_product.php" method="post">
-            <p><label>ID sản phẩm <input type="text" name="proID" value="' . htmlspecialchars($row['proID']) . '></label></p>
-            <p><label>Tên sản phẩm <input type="text" name="proName" value="' . htmlspecialchars($row['proName']) . '></label></p>
-            <p><label>Tên hãng <input type="text" name="company" value="' . htmlspecialchars($row['company']) . '></label></p>
+            <p><label>ID sản phẩm <input type="text" name="proID" value="' . $row['proID'] . '></label></p>
+            <p><label>Tên sản phẩm <input type="text" name="proName" value="' . $row['proName'] . '></label></p>
+            <p><label>Tên hãng <input type="text" name="company" value="' . $row['company'] . '></label></p>
             <p><label>Hình ảnh <input type="text" name="frontImage" value="' . htmlspecialchars($row['frontImage']) . '></label></p>
             <p><label>Hình ảnh khác <input type="text" name="endImage" value="' . htmlspecialchars($row['endImage']) . '></label></p>
             <p><label>Mô tả <textarea name="proDes" rows="5" cols="30" value="' . htmlspecialchars($row['proDes']) . '></textarea></label></p>
@@ -37,7 +37,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) {
 
     $problem = FALSE;
     if (!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
-        echo '<p class="error">Hãy gõ vào cả Trích dẫn và Nguồn của nó!</p>';
+        echo '<p class="error">Hãy gõ vào tất cả !</p>';
         $problem = TRUE;
     }
 
