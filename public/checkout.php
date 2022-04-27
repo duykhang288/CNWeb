@@ -1,7 +1,5 @@
 <?php
-    define('TITLE', 'Chi tiết');
     include '../partials/header.php';
-    
     if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
         echo $_GET['id'];
 ?>
@@ -57,7 +55,27 @@
                                             
                                         </div>
                                     </div>
-                                </div';
+                                </div
+                                <table class="table table-fixed">
+                                <thead scope="col">
+                                    <tr>
+                                        <th scope="col" colspan="2">
+                                            Sản Phẩm
+                                        </th>
+                                        <th scope="col">
+                                            Số lượng
+                                        </th>
+                                        <th scope="col">
+                                            Giá
+                                        </th>
+                                        <th scope="col">
+                                            Thành Tiền
+                                        </th>
+                                        <th scope="col">
+                                        </th>
+                                </thead>
+                                <tbody scope="col" id="tb2">
+                            </table>';
                          
                         
                         }
