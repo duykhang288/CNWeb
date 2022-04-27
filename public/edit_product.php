@@ -9,7 +9,7 @@ echo '<h2>Sửa một Sản phẩm</h2>';
 
 include '../partials/mysqli_connect.php';
 
-if (isset($_GET['id'])  ) {
+if (isset($_GET['id'])) {
 
     $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
 
@@ -18,11 +18,7 @@ if (isset($_GET['id'])  ) {
         while($row = mysqli_fetch_array($result)){
 
         echo '
-            <form action="add_product.php" method="post">
-            <div class="form-group w-25">
-                <label>ID sản phẩm</label>
-                <input type="text" name="proID" class="form-control" value="'.$row['proID'] . '">
-            </div>
+            <form action="edit_product.php" method="post">
             <div class="form-group w-25">
                 <label>Tên sản phẩm</label>
                 <input type="text" name="proName" class="form-control" value="' . $row['proName'] . '">
@@ -55,25 +51,23 @@ if (isset($_GET['id'])  ) {
                 <input type="number" name="price"  class="form-control mb-2" value="' . $row['price'] . '">
             </div>
 
-            <input class="btn-custom w-25" type="submit" name="submit" value="Sửa sản phẩm này!">
+            <input class="btn-custom w-25" type="submit" name="edit" value="Sửa sản phẩm này!">
             </form>';
         }
     } else {
         echo '<p class="error">Không thể lấy được sản phẩm này vì:<br>' . mysqli_error($dbc) . 
                 '.</p><p>Câu truy vấn này là: ' . $query . '</p>';
     }
-} elseif (isset($_POST['id'])) {
-
+} 
+elseif (isset($_POST['id'])) {
+    echo $_POST['id'];
     $problem = FALSE;
-    if (!empty($_POST['proID']) && !empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
+    if (!empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
         echo '<p class="error">Hãy gõ vào tất cả các ô trống !</p>';
         $problem = TRUE;
     }
 
     if (!$problem) {
-        if (isset($_POST['proID'])){
-			$id = $_POST['proID'];
-		}
 		if (isset($_POST['proName'])){
 			$name = $_POST['proName'];
 		}
@@ -95,16 +89,17 @@ if (isset($_GET['id'])  ) {
 		if (isset($_POST['price'])){
 			$price = $_POST['price'];
 		}
-        if (mysqli_query($dbc," UPDATE products SET proID=$id, proName=$name, company=$company, frontImage=$img, proDes=$des, color=$color, quantity=$quantity, price=$price WHERE proID='{$row['proID']}'"))
-        { 
+        if (mysqli_query($dbc," UPDATE products SET proName='$name', company='$company', frontImage='$img', proDes='$des', color='$color', quantity='$quantity', price='$price' WHERE proID='{$row['proID']}'"))
+        {   
 			echo '<p class="text-success">Đã sửa được sản phẩm</p>';
 		}else {
 			echo '<p class="error ">Không thể sửa sản phẩm vì:<br>' . mysqli_error($dbc) . '.</p><p>Câu truy vấn là: ' . $query .'</p>';
 		}
 		mysqli_close($dbc);
     }
-} else {
-    echo '<p class="error">Đã có lỗi xảy ra.</p>';
+}
+ else {
+    echo '<p class="error text-danger">Đã có lỗi xảy ra.</p>';
 }
 
 include '../partials/footer.php';

@@ -50,7 +50,7 @@ echo '<div   class="container skin-light">
                         <a type="button" style="width:100px;" class="btn-admin" href="edit_product.php?id='.$row['proID'].'">Sửa</a>
                         </div
                         <div class="col-6 style="text-align: center;"">
-                        <a type="button" style="width:100px;" class="btn-admin" onclick="deleteP(' . $row['proID'] . ')">Xóa</a>
+                        <a type="button" style="width:100px;" class="btn-admin" href="delete_product.php?id=' . $row['proID'] . '" >Xóa</a>
                         </div
                         </div>
 			            
@@ -93,4 +93,4 @@ include '../partials/footer.php';
 				location.reload()
 			})
 		}
-	</script>
+</script>

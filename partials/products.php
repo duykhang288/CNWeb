@@ -76,20 +76,23 @@
                             // $htmlspecialchars = 'htmlspecialchars';
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
                                 <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
-                                    
-                                <a href="product_detail.php?id='.$row['proID'].'">
-                                <img class="card-img-top" src="'.$row['frontImage'].'">
-                                </a>
-                                    
+                                    <a href="product_detail.php?id='.$row['proID'].'">
+                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <div class="price">'.$row['price'].' VNĐ</div>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div class="price">'. number_format($row['price'],0,3).' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
                                             </div>  
                                             
                                         </div>
@@ -122,20 +125,23 @@
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
                                 <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
-                                    
-                                <a href="product_detail.php?id='.$row['proID'].'">
-                                <img class="card-img-top" src="'.$row['frontImage'].'">
-                                </a>
-                                    
+                                    <a href="product_detail.php?id='.$row['proID'].'">
+                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <div class="price">'.$row['price'].' VNĐ</div>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div class="price">'. number_format($row['price'],0,3).' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
                                             </div>  
                                             
                                         </div>
@@ -168,20 +174,23 @@
                             
                             echo '<div class="product-item col-md-4 col-lg-3 col-sm-6 col-12">
                                 <div class="card m-3 m-2 shadow p-3 mb-5 bg-white border-0" style="width: 18rem;" >
-                                    
-                                <a href="product_detail.php?id='.$row['proID'].'">
-                                <img class="card-img-top" src="'.$row['frontImage'].'">
-                                </a>
-                                    
+                                    <a href="product_detail.php?id='.$row['proID'].'">
+                                    <img class="card-img-top" src="'.$row['frontImage'].'">
+                                    </a>
                                     <div class="card-body">
                                         <h5 class="card-title">'.$row['proName'].'</h5>
-                                        <div class="price">'.$row['price'].' VNĐ</div>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <div class="price">'. number_format($row['price'],0,3).' VNĐ</div>
                                         <div class="row">
                                             <div class="col-6">
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?item='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
                                             </div>  
                                             
                                         </div>
