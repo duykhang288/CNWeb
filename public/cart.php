@@ -26,7 +26,7 @@ echo '<div   class="container skin-light">
         </tr>
   </thead>
   <tbody scope="col">';
-    if (isset($_GET['id']) && ($_GET['id'] > 0) ) {
+    if (isset($_GET['id']) ) {
         include '../partials/mysqli_connect.php';
         $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
                 if ($result = mysqli_query($dbc, $query)){
