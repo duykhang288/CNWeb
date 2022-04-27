@@ -31,7 +31,9 @@ echo '<div   class="container skin-light">
         $query = "SELECT * FROM products WHERE proID ='{$_GET['id']}'";
                 if ($result = mysqli_query($dbc, $query)){
                     $row = mysqli_fetch_array($result);
-                        echo'<tr>
+                        echo'<div class="container-fluid row">
+                        <div ="container"> 
+                        <tr>
                         <th scope="col">
                             <img width="250px" src="'.$row['frontImage'].'">
                         </th>
@@ -47,10 +49,12 @@ echo '<div   class="container skin-light">
                         <th scope="col">
                             '.$row['price'].'
                         </th>
-                        <th scope="col">
-                            <a href="#" onclick="removeCart"><i class="fa fa-trash"> </i></a>
-                        </th>
-                    </tr>';
+                        
+                    </tr>
+                      
+                    <button  type="submit" name="checkout" class="btn" style="background-color: #494949 !important; color: #FFFFFF;">Đặt hàng</button>
+                    </div>'
+                    ;
                     
                     
                 } else {
