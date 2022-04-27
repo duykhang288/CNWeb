@@ -31,17 +31,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 ?>
-
 <form action="add_product.php" method="post">
-	<p><label>ID sản phẩm <input type="text" name="proID"></label></p>
-	<p><label>Tên sản phẩm <input type="text" name="proName"></label></p>
-	<p><label>Tên hãng <input type="text" name="company"></label></p>
-	<p><label>Hình ảnh <input type="text" name="frontImage"></label></p>
-	<p><label>Mô tả <textarea name="proDes" rows="5" cols="30"></textarea></label></p>
-	<p><label>Màu <input type="text" name="color"></label></p>
-	<p><label>Số lượng <input type="number" name="quantity"></label></p>
-	<p><label>Giá <input type="number" name="price"></label></p>
-	<p><input class="btn-custom" type="submit" name="submit" value="Thêm Sản phẩm này!"></p>
+  <div class="form-group w-25">
+    <label>ID sản phẩm</label>
+    <input type="text" name="proID" size="20" class="form-control" >
+  </div>
+  <div class="form-group w-25">
+    <label>Tên sản phẩm</label>
+    <input type="text" name="proName" class="form-control">
+  </div>
+  <div class="form-group w-25">
+    <label>Tên hãng</label>
+    <input type="text" name="company" class="form-control">
+  </div>
+  <div class="form-group w-50">
+    <label>Hình ảnh</label>
+    <input type="text" name="frontImage" class="form-control">
+  </div>
+  <div class="form-group w-50">
+    <label>Mô tả</label>
+	<textarea type="text" name="proDes" class="form-control" rows="5"></textarea>
+  </div>
+  <div class="form-group w-25">
+    <label>Màu</label>
+    <input type="text" name="color" class="form-control">
+  </div>
+  <div class="form-group w-25">
+    <label>Số lượng</label>
+    <input type="number" name="quantity" class="form-control">
+  </div>
+  <div class="form-group w-25">
+    <label>Giá</label>
+    <input type="number" name="price"  class="form-control mb-2">
+  </div>
+
+  <input class="btn-custom w-25" type="submit" name="submit" value="Thêm Sản phẩm này!">
 </form>
 
 <?php include '../partials/footer.php'; ?>
