@@ -53,7 +53,7 @@ include '../partials/mysqli_connect.php';
 
 include '../partials/products.php';
 
-include '../partials/add_cart.php';
+
 
 include '../partials/footer.php';
 ?>

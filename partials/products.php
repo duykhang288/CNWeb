@@ -44,7 +44,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="index.php?idproduct='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a href="checkout.php?id='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -196,7 +196,7 @@
                                 '.</p><p>Câu truy vấn là: ' . $query . '</p>';
                     }
                     
-                    mysqli_close($dbc);
+                  //  mysqli_close($dbc);
             ?>
         </div>
     </section>
