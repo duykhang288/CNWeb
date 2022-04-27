@@ -1,4 +1,5 @@
 <?php
+define('TITLE', 'Tin Tức');
     include '../partials/header.php';
         include '../partials/mysqli_connect.php';
 

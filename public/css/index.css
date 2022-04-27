@@ -10,7 +10,7 @@
 }
 .price {
   font-weight: bold;
-  color: red!important;
+  color: #515457!important;
   padding-bottom:10px;
   font-size: 18px;
 }
@@ -21,7 +21,7 @@
   width: 100%;
   text-align: center;
   color: #fff ;
-  background-color: #1298c8 ;
+  background-color: #494949 ;
   cursor: pointer;
   outline: none;
   border: none;
@@ -31,19 +31,37 @@
 .btn-favorite {
   display: inline-block;
   padding: 7px;
-  border: 1px solid #1298c8;
+  border: 1px solid rgb(173, 0, 0);
   border-radius: 20px;
   width: 100%;
   text-align: center;
-  color: #1298c8 ;
+  color: rgb(173, 0, 0) ;
   background-color: #fff ;
   cursor: pointer;
   font-size: 16px;
   text-decoration: none;
 }
-.btn-custom:hover, .btn-favorite:hover {
+.btn-favorite:hover {
   color: #fff;
-  background-color: #45bde9;
+  background-color: rgb(173, 0, 0);
+}
+.btn-admin {
+  display: inline-block;
+  padding: 7px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff ;
+  background-color: #494949 ;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+}
+.btn-admin:hover, .btn-custom:hover {
+  color: #fff ;
+  background-color:#797979;
 }
 h5{ 
   height:48px;
