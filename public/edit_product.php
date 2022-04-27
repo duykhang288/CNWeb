@@ -50,8 +50,8 @@ if (isset($_GET['id'])) {
                 <label>Giá</label>
                 <input type="number" name="price"  class="form-control mb-2" value="' . $row['price'] . '">
             </div>
-
-            <input class="btn-custom w-25" type="submit" name="edit" value="Sửa sản phẩm này!">
+            <input class="btn-custom w-25" name="id" type="hidden" value="' .$_GET['id'] . '">
+            <input class="btn-custom w-25" type="submit" name="submit" value="Sửa sản phẩm này!">
             </form>';
         }
     } else {
@@ -60,9 +60,8 @@ if (isset($_GET['id'])) {
     }
 } 
 elseif (isset($_POST['id'])) {
-    echo $_POST['id'];
     $problem = FALSE;
-    if (!empty($_POST['proName'])&& !empty($_POST['company'])&& !empty($_POST['frontImage'])&& !empty($_POST['proDes'])&& !empty($_POST['color'])&& !empty($_POST['quantity'])&& !empty($_POST['price'])) {
+    if (empty($_POST['proName'])&& empty($_POST['company'])&& empty($_POST['frontImage'])&& empty($_POST['proDes'])&& empty($_POST['color'])&& empty($_POST['quantity'])&& empty($_POST['price'])) {
         echo '<p class="error">Hãy gõ vào tất cả các ô trống !</p>';
         $problem = TRUE;
     }
@@ -89,7 +88,7 @@ elseif (isset($_POST['id'])) {
 		if (isset($_POST['price'])){
 			$price = $_POST['price'];
 		}
-        if (mysqli_query($dbc," UPDATE products SET proName='$name', company='$company', frontImage='$img', proDes='$des', color='$color', quantity='$quantity', price='$price' WHERE proID='{$row['proID']}'"))
+        if (mysqli_query($dbc," UPDATE products SET proName='$name', company='$company', frontImage='$img', proDes='$des', color='$color', quantity='$quantity', price='$price' WHERE proID='{$_POST['id']}'"))
         {   
 			echo '<p class="text-success">Đã sửa được sản phẩm</p>';
 		}else {
