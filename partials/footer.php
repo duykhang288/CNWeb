@@ -17,7 +17,7 @@
                     </div>
                 
                 </div>
-                <div class="row border h-80 text-sm-start text-center d-flex  justify-content-center" style="background-color: rgba(245, 245, 245, 0.699);">
+                <div class="row border h-80 text-lg-start text-center d-flex  justify-content-center" style="background-color: rgba(245, 245, 245, 0.699);">
                     <div class="col-lg-3   ">
                       
 
