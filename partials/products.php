@@ -1,8 +1,21 @@
-<div>
+<div >
+    <?php
+    include '../partials/addcart.php';
+    
+    include '../partials/mysqli_connect.php';
+    
+  
+?>
+   
     <section class="company">
         <div>
             <h3>Apple</h3>
         </div>
+        <?php 
+        if(isset($message)){ 
+            echo "<h2>$message</h2>"; 
+        } 
+    ?> 
         <div class="products row container-fluid">
          <!-- onclick="addCart("<?php echo $row['proID']?>")" -->
             <?php 
@@ -31,7 +44,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <a href="cart.php?page=products&action=add&id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
+                                                <a href="index.php?idproduct='.$row['proID'].'" id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>

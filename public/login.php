@@ -19,7 +19,14 @@ if (isset($_POST['dangnhap']))
      
     $query = mysqli_query($dbc,"SELECT username, Pass FROM account WHERE username='$username'");
     if (mysqli_num_rows($query) == 0) {
-        echo "Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        echo '<div class="row container-fluid h-50 ">
+		<div class="col d-flex justify-content-center shadow h-50" style="background-color:#F8F8F8; border-radius:30px; margin-top: 100px; margin-bottom:100px;"  >
+	<h1 >
+		Tên đăng nhập không tồn tại. 
+	</h1>
+			
+		</div>
+	</div>';
         exit;
     }
      
