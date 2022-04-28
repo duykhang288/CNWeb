@@ -5,7 +5,7 @@ include '../partials/header.php';
 
 echo '<h2>Thêm một Sản phẩm</h2>';
 
-//include '../partials/check_admin.php';
+include '../partials/check_admin.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

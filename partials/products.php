@@ -92,7 +92,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
+                                            <a href="checkout.php?id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -141,7 +141,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
+                                            <a href="checkout.php?id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -190,7 +190,7 @@
                                                 <a class="btn-favorite"><i class="fa fa-heart-o">Yêu Thích</i></a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="submit" href="checkout.php?id='.$row['proID'].'" class="btn-custom"> <i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</button>
+                                            <a href="checkout.php?id='.$row['proID'].'"  id="btn-cart" class="btn-custom"><i class="fa-solid fa-cart-shopping"></i>Đặt Hàng</a>
                                             </div>  
                                             
                                         </div>
@@ -208,56 +208,5 @@
                   //  mysqli_close($dbc);
             ?>
         </div>
-    </section>
-    <!-- <?php 
-        $query = 'SELECT * FROM products ';
-        if ($result = mysqli_query($dbc, $query)){
-            $company="";
-            while ($row = mysqli_fetch_array($result)) {
-                $queryCom= 'SELECT * FROM products where company="'.$row['company'].'";';
-                //$htmlspecialchars = 'htmlspecialchars';
-                if($company!=$row['company']){
-                    echo '
-                    <section class="company">
-                    <div>
-                        <h3>'.$row['company'].'</h3>
-                    </div>
-                    <div class="products row">';
-                    $company=$row['company'];
-                }
-                if($company=mysqli_query($dbc, $queryCom)){
-                    
-                    while ($row = mysqli_fetch_array($company)) {
-                        echo '
-                        <div class="product-item col-sm-3">
-                            <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
-                                <img class="card-img-top" src="'.$row['frontImage'].'">
-                                <div class="card-body">
-                                    <h5 class="card-title">'.$row['proName'].'</h5>
-                                    <p>'.$row['company'].'</p>
-                                    <div class="price">'.$row['price'].' VNĐ</div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <button class="btn-custom btn">Yêu thích</button>
-                                        </div>
-                                        <div class="col-6">
-                                            <button class="btn-custom btn" href="checkout.php">Đặt Hàng</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>';
-                    }
-                }
-                echo '</div>
-                        </section>';
-                
-            }
-        } else {
-            echo '<p class="error">Không thể lấy dữ liệu vì: <br>' . mysqli_error($dbc) . 
-                    '.</p><p>Câu truy vấn là: ' . $query . '</p>';
-        }
-            
-        mysqli_close($dbc);
-    ?> -->
+    </section>  
 </div>

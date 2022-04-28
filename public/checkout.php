@@ -44,10 +44,10 @@ echo '<div   class="container skin-light">
                         <input type="number" name="price" value="1">
                         </th>
                         <th scope="col">
-                            '.$row['price'].'
+                            '.number_format($row['price'],0,3).'
                         </th>
                         <th scope="col">
-                            '.$row['price'].'
+                            '.number_format($row['price'],0,3).'
                         </th>
                         
                     </tr>

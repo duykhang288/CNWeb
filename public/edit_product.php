@@ -5,7 +5,7 @@ include '../partials/header.php';
 
 echo '<h2>Sửa một Sản phẩm</h2>';
 
-// include '../partials/check_admin.php';
+include '../partials/check_admin.php';
 
 include '../partials/mysqli_connect.php';
 
